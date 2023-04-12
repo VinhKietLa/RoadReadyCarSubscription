@@ -1,18 +1,19 @@
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Home from "./components/Home";
+import Hero from "./components/Hero";
 
 function App() {
   return (
     <Router>
       <Navbar />
+      <Hero />
 
         {/* Wrap Route elements in a Routes component */}
         <Routes basename="/">
           {/* Define routes using the Route component to render different page components at different paths */}
           {/* Define a default route that will render the Home component */}
-          <Route path="/" element={<Home />} exact />
+          {/* <Route path="/" element={<Hero />} exact /> */}
         </Routes>
    
       

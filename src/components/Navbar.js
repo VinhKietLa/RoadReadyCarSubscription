@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="bg-blue-500 text-white shadow-md">
+    <header className="fixed top-0 left-0 w-full text-black shadow-md z-10">
       <nav className="container mx-auto px-6 py-3 flex justify-between items-center">
         <div className="flex justify-between items-center">
           {/* Burger Icon */}
@@ -29,15 +29,11 @@ const Navbar = () => {
             </svg>
           </div>
 
-          <a href="/" className="font-semibold text-xl">
+          <a href="/" className="font-semibold text-3xl text-red-500 underline">
             VENTAL
           </a>
         </div>
-        <ul
-          className={`${
-            isOpen ? 'block' : 'hidden'
-          } md:flex md:space-x-6`}
-        >
+        <ul className={`${isOpen ? "block" : "hidden"} md:flex md:space-x-6 items-center`}>
           <li>
             <a href="/#" className="hover:text-gray-200">
               Home
@@ -69,9 +65,12 @@ const Navbar = () => {
             </a>
           </li>
           <li>
-            <a href="/#" className="hover:text-gray-200">
-              Register
-            </a>
+            <button class="border-2 border-red-500 p-2">
+              {" "}
+              <a href="/#" className="hover:text-gray-200 text-red-500">
+                Register
+              </a>
+            </button>
           </li>
         </ul>
       </nav>
