@@ -1,16 +1,22 @@
-import './App.css';
+import "./App.css";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Home from "./components/Home";
 
 function App() {
   return (
-<div className="container mx-auto bg-gray-200 rounded-xl shadow border p-8 m-10">
-      <p className="text-3xl text-gray-700 font-bold mb-5">
-        Welcome!
-      </p>
-      <p className="text-gray-500 text-lg">
-        React and Tailwind CSS in action
-      </p>
-    </div>
+    <Router>
+      <Navbar />
 
+        {/* Wrap Route elements in a Routes component */}
+        <Routes basename="/">
+          {/* Define routes using the Route component to render different page components at different paths */}
+          {/* Define a default route that will render the Home component */}
+          <Route path="/" element={<Home />} exact />
+        </Routes>
+   
+      
+    </Router>
   );
 }
 
