@@ -29,8 +29,8 @@ const Navbar = () => {
             </svg>
           </div>
 
-          <a href="/" className="font-semibold text-3xl text-red-500 underline">
-            VENTAL
+          <a href="/" className="font-semibold text-3xl text-red-500">
+            RoadReady
           </a>
         </div>
         <ul className={`${isOpen ? "block" : "hidden"} md:flex md:space-x-6 items-center`}>

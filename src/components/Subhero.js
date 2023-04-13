@@ -19,7 +19,7 @@ const Subhero = () => {
   return (
     <>
       <div className="container mx-auto pt-10 px-4 text-center">
-        <h1 class="text-3xl">
+        <h1 class="text-3xl font-bold	">
           Discover the ultimate driving experience with our hassle-free car
           subscriptions.
         </h1>
@@ -32,7 +32,7 @@ const Subhero = () => {
               size="2xl"
             />
             <p>
-              Choose from a wide range vehicles, from SUVs to Sports car we it
+              Choose from a wide range vehicles, from SUVs to Sports car we have it
               available!
             </p>
           </div>
@@ -43,7 +43,7 @@ const Subhero = () => {
               style={{ color: "#ff000d" }}
               size="2xl"
             />
-            <p>Customize your subscription to meet your needs.</p>
+            <p>Customize your subscription to meet every your needs.</p>
           </div>
           <div className={`flex-initial w-64 ${styles.itemSpacing}`}>
             <h1 class="text-xl font-bold">
@@ -65,7 +65,7 @@ const Subhero = () => {
         </button>
       </div>
       <div className="container mx-auto mt-20 px-4 mt-10 text-center border-top pb-20">
-        <h1 class=" text-3xl">
+        <h1 class=" text-3xl font-bold	">
           With our flexible car subscription service, you get:
         </h1>
         <div class="mt-10 grid grid-cols-2 gap-10">
@@ -142,9 +142,32 @@ const Subhero = () => {
           </div>
         </div>
       </div>
+      
       <div className="container mx-auto mt-10 px-5 flex items-center">
-      <h1 class="w-1/2 text-center text-3xl"> <span class="text-red-500">Unlock the Road:</span> Download Our App and
+      <div className = "flex flex-col text-center items-center">
+      <h1 className="w-full text-3xl mx-auto items-center"> <span class="text-red-500">Unlock the Road:</span> Download Our App and
       Experience Car Subscriptions Today!</h1>
+      <div className="flex mt-5">
+      <button
+        className="px-6 py-2 text-white font-semibold rounded mr-4 h-20 w-60"
+        style={{
+          backgroundImage: "url('../assets/iosBtn.png')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+      </button>
+      <button
+        className="px-6 py-2 text-white font-semibold rounded h-20 w-60"
+        style={{
+          backgroundImage: "url('../assets/androidBtn.png')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+      </button>
+    </div>
+      </div>
       <div className="h-[600px] w-[50%] bg-contain bg-no-repeat bg-center flex items-center" style={{ backgroundImage: "url('./assets/mobileApp.png')" }}>
       </div>
       </div>
