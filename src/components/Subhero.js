@@ -29,7 +29,7 @@ const Subhero = () => {
             <FontAwesomeIcon
               icon={faCar}
               style={{ color: "#ff000d" }}
-              size="2xl"
+              size="7x"
             />
             <p>
               Choose from a wide range vehicles, from SUVs to Sports car we have it
@@ -41,7 +41,7 @@ const Subhero = () => {
             <FontAwesomeIcon
               icon={faCalendarDays}
               style={{ color: "#ff000d" }}
-              size="2xl"
+              size="7x"
             />
             <p>Customize your subscription to meet every your needs.</p>
           </div>
@@ -52,7 +52,7 @@ const Subhero = () => {
             <FontAwesomeIcon
               icon={faRoad}
               style={{ color: "#ff000d" }}
-              size="2xl"
+              size="7x"
             />
             <p>
               We’ll get you approved within the hour and offer same day delivery
@@ -73,7 +73,7 @@ const Subhero = () => {
             <FontAwesomeIcon
               icon={faCarBurst}
               style={{ color: "#ff000d" }}
-              size="2xl"
+              size="4x"
             />
             <p>Comprehensive Insurance cover for two drivers</p>
           </div>
@@ -82,7 +82,7 @@ const Subhero = () => {
             <FontAwesomeIcon
               icon={faInfinity}
               style={{ color: "#ff000d" }}
-              size="2xl"
+              size="4x"
             />
             <p>Unlimited mileage</p>
           </div>
@@ -91,7 +91,7 @@ const Subhero = () => {
             <FontAwesomeIcon
               icon={faHammer}
               style={{ color: "#ff000d" }}
-              size="2xl"
+              size="4x"
             />
             <p>Maintence and servicing fees covered</p>
           </div>
@@ -100,7 +100,7 @@ const Subhero = () => {
             <FontAwesomeIcon
               icon={faHeadset}
               style={{ color: "#ff000d" }}
-              size="2xl"
+              size="4x"
             />
             <p>24/7 Help and Roadside assistance</p>
           </div>
@@ -109,7 +109,7 @@ const Subhero = () => {
             <FontAwesomeIcon
               icon={faTruck}
               style={{ color: "#ff000d" }}
-              size="2xl"
+              size="4x"
             />
             <p>Same Day Collection & Delivery service</p>
           </div>
@@ -118,7 +118,7 @@ const Subhero = () => {
             <FontAwesomeIcon
               icon={faBan}
               style={{ color: "#ff000d" }}
-              size="2xl"
+              size="4x"
             />
             <p>Congestion Charge covered by us</p>
           </div>
@@ -127,7 +127,7 @@ const Subhero = () => {
             <FontAwesomeIcon
               icon={faChargingStation}
               style={{ color: "#ff000d" }}
-              size="2xl"
+              size="4x"
             />
             <p>Free Home Charging for EVs</p>
           </div>
@@ -136,11 +136,12 @@ const Subhero = () => {
             <FontAwesomeIcon
               icon={faXmark}
               style={{ color: "#ff000d" }}
-              size="2xl"
+              size="4x"
             />
             <p>Cancel Anytime</p>
           </div>
         </div>
+        <h1 className="text-center pt-20">We also offer many other benefits including free road tax, car washes and discounts on fuel and much more! </h1>
       </div>
       
       <div className="container mx-auto mt-10 px-5 flex items-center">
