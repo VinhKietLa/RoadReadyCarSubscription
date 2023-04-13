@@ -142,8 +142,11 @@ const Subhero = () => {
           </div>
         </div>
       </div>
-      <div className="container bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('./assets/mobileapp.svg')" }}>
+      <div className="container mx-auto h-[600px] w-full bg-cover bg-no-repeat flex items-center">
+      <h1 class="w-1/2 text-center text-3xl">Unlock the Road: Download Our App and Experience Car Subscriptions Today!</h1>
+      <div className=" h-[600px] w-full bg-contain bg-no-repeat bg-center flex items-center" style={{ backgroundImage: "url('./assets/mobileApp.png')" }}>
 
+      </div>
       </div>
     </>
   );
