@@ -141,7 +141,7 @@ const Subhero = () => {
             <p>Cancel Anytime</p>
           </div>
         </div>
-        <h1 className="text-center pt-20">We also offer many other benefits including free road tax, car washes and discounts on fuel and much more! </h1>
+        <h1 className="text-center pt-20">We also offer many other benefits including free road tax, car washes, discounts on fuel and much more! </h1>
       </div>
       
       <div className="container mx-auto mt-10 px-5 flex items-center">
