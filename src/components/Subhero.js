@@ -15,12 +15,11 @@ import { faBan } from "@fortawesome/free-solid-svg-icons";
 import { faChargingStation } from "@fortawesome/free-solid-svg-icons";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
-
 const Subhero = () => {
   return (
     <>
-      <div class="container mx-auto px-4 mt-10 text-center divide-x divide-solid divide-red-500">
-        <h1 class="text-red-500 text-3xl">
+      <div className="container mx-auto pt-10 px-4 text-center">
+        <h1 class="text-3xl">
           Discover the ultimate driving experience with our hassle-free car
           subscriptions.
         </h1>
@@ -65,52 +64,86 @@ const Subhero = () => {
           Let's Drive!
         </button>
       </div>
-      <div class="container mx-auto mt-20 px-4 mt-10 text-center border-top pb-20">
+      <div className="container mx-auto mt-20 px-4 mt-10 text-center border-top pb-20">
         <h1 class=" text-3xl">
           With our flexible car subscription service, you get:
         </h1>
-        <div class="flex justify-around mt-10 pt-5 flew-row">
-
-          <div className={`flex w-64 flew-row`}>
-            <FontAwesomeIcon icon={faCarBurst} />
+        <div class="mt-10 grid grid-cols-2 gap-10">
+          <div>
+            <FontAwesomeIcon
+              icon={faCarBurst}
+              style={{ color: "#ff000d" }}
+              size="2xl"
+            />
             <p>Comprehensive Insurance cover for two drivers</p>
           </div>
 
-          <div className={`flex w-64 flew-row`}>
-            <FontAwesomeIcon icon={faInfinity} /> 
+          <div>
+            <FontAwesomeIcon
+              icon={faInfinity}
+              style={{ color: "#ff000d" }}
+              size="2xl"
+            />
             <p>Unlimited mileage</p>
           </div>
 
-          <div className={`flex w-64 flew-row`}>
-          <FontAwesomeIcon icon={faHammer} />          
-          <p>Maintence and servicing fees covered</p>
+          <div>
+            <FontAwesomeIcon
+              icon={faHammer}
+              style={{ color: "#ff000d" }}
+              size="2xl"
+            />
+            <p>Maintence and servicing fees covered</p>
           </div>
 
-          <div className={`flex w-64 flew-row`}>
-          <FontAwesomeIcon icon={faHeadset} />          
-          <p>24/7 Help and Roadside assistance</p>
+          <div>
+            <FontAwesomeIcon
+              icon={faHeadset}
+              style={{ color: "#ff000d" }}
+              size="2xl"
+            />
+            <p>24/7 Help and Roadside assistance</p>
           </div>
 
-          <div className={`flex w-64 flew-row`}>
-          <FontAwesomeIcon icon={faTruck} />         
-          <p>Same Day Collection & Delivery service</p>
+          <div>
+            <FontAwesomeIcon
+              icon={faTruck}
+              style={{ color: "#ff000d" }}
+              size="2xl"
+            />
+            <p>Same Day Collection & Delivery service</p>
           </div>
 
-          <div className={`flex w-64 flew-row`}>
-          <FontAwesomeIcon icon={faBan} />         
-          <p>Congestion Charge covered by us</p>
+          <div>
+            <FontAwesomeIcon
+              icon={faBan}
+              style={{ color: "#ff000d" }}
+              size="2xl"
+            />
+            <p>Congestion Charge covered by us</p>
           </div>
 
-          <div className={`flex w-64 flew-row`}>
-          <FontAwesomeIcon icon={faChargingStation} />         
-          <p>Free Home Charging for EVs</p>
+          <div>
+            <FontAwesomeIcon
+              icon={faChargingStation}
+              style={{ color: "#ff000d" }}
+              size="2xl"
+            />
+            <p>Free Home Charging for EVs</p>
           </div>
 
-          <div className={`flex w-64 flew-row`}>
-          <FontAwesomeIcon icon={faXmark} />        
-          <p>Cancel Anytime</p>
+          <div>
+            <FontAwesomeIcon
+              icon={faXmark}
+              style={{ color: "#ff000d" }}
+              size="2xl"
+            />
+            <p>Cancel Anytime</p>
           </div>
         </div>
+      </div>
+      <div className="container bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('./assets/mobileapp.svg')" }}>
+
       </div>
     </>
   );
