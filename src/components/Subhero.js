@@ -149,7 +149,10 @@ const Subhero = () => {
         <h1 className="text-center pt-20 font-bold text-lg">We also offer many other benefits including free road tax, car washes, discounts on fuel and much more! </h1>
       </div>
       
-      <div className="container mx-auto mt-6 mb-8 px-5 flex items-center">
+      {/* <div class="flex flex-col items-center sm:items-center md:flex-row md:justify-around mt-10 pt-5"> */}
+
+
+      <div className="container mx-auto mt-6 mb-8 px-5 flex flex-col md:flex-row items-center">
       <div className = "flex flex-col text-center items-center">
       <h1 className="w-full text-3xl mx-auto items-center"> <span class="text-red-500 font-semibold">Unlock the Road:</span> Download Our App and
       Experience Car Subscriptions Today!</h1>
