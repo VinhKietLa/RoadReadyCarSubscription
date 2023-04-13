@@ -23,9 +23,10 @@ const Subhero = () => {
           Discover the ultimate driving experience with our hassle-free car
           subscriptions.
         </h1>
-        <div class="flex justify-around mt-10 pt-5">
-          <div className={`flex-initial w-64 ${styles.itemSpacing}`}>
-            <h1 class="text-xl font-bold">1. Choose your favourite vehicle</h1>
+        <div class="flex flex-col items-center sm:items-center md:flex-row md:justify-around mt-10 pt-5">
+          
+          <div className={`flex-initial w-64 sm:h-10 ${styles.itemSpacing}`}>
+            <h1 class="text-xl font-semibold">1. Choose your favourite vehicle</h1>
             <FontAwesomeIcon
               icon={faCar}
               style={{ color: "#ff000d" }}
@@ -36,8 +37,9 @@ const Subhero = () => {
               available!
             </p>
           </div>
+
           <div className={`flex-initial w-64 ${styles.itemSpacing}`}>
-            <h1 class="text-xl font-bold">2. Set your preferred terms</h1>
+            <h1 class="text-xl font-semibold">2. Set your preferred terms</h1>
             <FontAwesomeIcon
               icon={faCalendarDays}
               style={{ color: "#ff000d" }}
@@ -45,8 +47,9 @@ const Subhero = () => {
             />
             <p>Customize your subscription to meet every your needs.</p>
           </div>
+
           <div className={`flex-initial w-64 ${styles.itemSpacing}`}>
-            <h1 class="text-xl font-bold">
+            <h1 class="text-xl font-semibold">
               3. Hit the road - it's that simple!
             </h1>
             <FontAwesomeIcon
@@ -64,8 +67,10 @@ const Subhero = () => {
           Let's Drive!
         </button>
       </div>
+
+
       <div className="container mx-auto mt-20 px-4 mt-10 text-center border-top pb-20">
-        <h1 class=" text-3xl font-bold	">
+        <h1 class=" text-3xl font-bold">
           With our flexible car subscription service, you get:
         </h1>
         <div class="mt-10 grid grid-cols-2 gap-10">
@@ -75,7 +80,7 @@ const Subhero = () => {
               style={{ color: "#ff000d" }}
               size="4x"
             />
-            <p>Comprehensive Insurance cover for two drivers</p>
+            <p className="font-normal">Comprehensive Insurance cover for two drivers</p>
           </div>
 
           <div>
@@ -141,12 +146,12 @@ const Subhero = () => {
             <p>Cancel Anytime</p>
           </div>
         </div>
-        <h1 className="text-center pt-20">We also offer many other benefits including free road tax, car washes, discounts on fuel and much more! </h1>
+        <h1 className="text-center pt-20 font-bold text-lg">We also offer many other benefits including free road tax, car washes, discounts on fuel and much more! </h1>
       </div>
       
-      <div className="container mx-auto mt-10 px-5 flex items-center">
+      <div className="container mx-auto mt-6 mb-8 px-5 flex items-center">
       <div className = "flex flex-col text-center items-center">
-      <h1 className="w-full text-3xl mx-auto items-center"> <span class="text-red-500">Unlock the Road:</span> Download Our App and
+      <h1 className="w-full text-3xl mx-auto items-center"> <span class="text-red-500 font-semibold">Unlock the Road:</span> Download Our App and
       Experience Car Subscriptions Today!</h1>
       <div className="flex mt-5">
       <button
