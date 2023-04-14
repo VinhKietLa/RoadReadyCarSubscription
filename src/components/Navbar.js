@@ -1,10 +1,11 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 w-full text-black shadow-md z-10">
+    <div className="fixed top-0 left-0 w-full text-black shadow-md z-10">
       <nav className="container mx-auto px-6 py-3 flex justify-between items-center">
         <div className="flex justify-between items-center">
           {/* Burger Icon */}
@@ -12,69 +13,86 @@ const Navbar = () => {
             className="md:hidden cursor-pointer"
             onClick={() => setIsOpen(!isOpen)}
           >
-            <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24">
-              {isOpen ? (
-                // If menu is open, show "X" icon
-                <path
-                  fillRule="evenodd"
-                  d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-5.657-5.657-5.657 5.657a1 1 0 0 1-1.414-1.414l5.657-5.657-5.657-5.657a1 1 0 0 1 1.414-1.414l5.657 5.657 5.657-5.657a1 1 0 1 1 1.414 1.414l-5.657 5.657 5.657 5.657z"
-                />
-              ) : (
-                // If menu is closed, show burger icon
-                <path
-                  fillRule="evenodd"
-                  d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
-                />
-              )}
-            </svg>
+            {/* ... */}
           </div>
 
-          <a href="/" className="font-semibold text-3xl text-red-500">
+          <NavLink to="/" className="font-semibold text-3xl text-red-500">
             RoadReady
-          </a>
+          </NavLink>
         </div>
-        <ul className={`${isOpen ? "block" : "hidden"} md:flex md:space-x-6 items-center`}>
+        <ul
+          className={`${
+            isOpen ? "block" : "hidden"
+          } md:flex md:space-x-6 items-center`}
+        >
           <li>
-            <a href="/#" className="hover:text-gray-200">
+            <NavLink
+              to="/"
+              activeClassName="text-gray-200"
+              className="hover:text-gray-200"
+            >
               Home
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a href="/#" className="hover:text-gray-200">
+            <NavLink
+              to="/browse"
+              activeClassName="text-gray-200"
+              className="hover:text-gray-200"
+            >
               Browse Cars
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a href="/#" className="hover:text-gray-200">
+            <NavLink
+              to="/about"
+              activeClassName="text-gray-200"
+              className="hover:text-gray-200"
+            >
               About
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a href="/#" className="hover:text-gray-200">
+            <NavLink
+              to="/how-it-works"
+              activeClassName="text-gray-200"
+              className="hover:text-gray-200"
+            >
               How it works
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a href="/#" className="hover:text-gray-200">
+            <NavLink
+              to="/help"
+              activeClassName="text-gray-200"
+              className="hover:text-gray-200"
+            >
               Help
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a href="/#" className="hover:text-gray-200">
+            <NavLink
+              to="/sign-in"
+              activeClassName="text-gray-200"
+              className="hover:text-gray-200"
+            >
               Sign in
-            </a>
+            </NavLink>
           </li>
           <li>
             <button class="border-2 border-red-500 p-2">
-              {" "}
-              <a href="/#" className="hover:text-gray-200 text-red-500">
+              <NavLink
+                to="/register"
+                activeClassName="text-gray-200"
+                className="hover:text-gray-200 text-red-500"
+              >
                 Register
-              </a>
+              </NavLink>
             </button>
           </li>
         </ul>
       </nav>
-    </header>
+    </div>
   );
 };
 

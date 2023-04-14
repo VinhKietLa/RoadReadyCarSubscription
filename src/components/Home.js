@@ -1,12 +1,11 @@
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Subhero from "./components/Subhero";
-import Footer from "./components/Footer";
+import Navbar from "./Navbar";
+import Hero from "./Hero";
+import Subhero from "./Subhero";
+import Footer from "./Footer";
 
 function Home() {
   return (
     <>
-      <Navbar />
       <Hero />
       <Subhero />
       <Footer />
