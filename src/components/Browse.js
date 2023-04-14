@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import CarCard from "./CarCard";
 import "../index.css";
 
@@ -15,7 +15,7 @@ function Browse() {
         <h2 className=" w-1/3 text-white mt-8 ml-6">
           Choose from our range of vehicles from hatchbacks to convertibles we
           have you covered! Don’t see a car you want? Pop us an email on
-          <span className="text-red-500">hello@roadready.com</span>
+          <span className="text-red-500"> hello@roadready.com</span>
         </h2>
       </div>
 

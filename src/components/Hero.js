@@ -2,7 +2,7 @@ import React from 'react';
 
 const Hero = () => {
   return (
-    <section className="pt-60 h-screen bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('./assets/teslaHero.svg')" }}>
+    <section className="pt-60 h-screen bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('./assets/heroTest.jpeg')" }}>
       <div className="container mx-auto h-full flex flex-col justify-between">
         <div className="text-center">
           <h1 className="text-5xl font-bold"><span className="text-red-500">Drive Your Dream:</span> Flexible Car Subscriptions for the Modern Motorist</h1>
