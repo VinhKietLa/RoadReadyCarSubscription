@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import CarCard from "./CarCard";
 import "../index.css";
 
 function Browse() {
@@ -18,6 +18,8 @@ function Browse() {
           <span className="text-red-500">hello@roadready.com</span>
         </h2>
       </div>
+
+      <CarCard />
     </>
   );
 }

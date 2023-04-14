@@ -80,7 +80,7 @@ const Navbar = () => {
             </NavLink>
           </li>
           <li>
-            <button class="border-2 border-red-500 p-2">
+            <button className="border-2 border-red-500 p-2">
               <NavLink
                 to="/register"
                 activeClassName="text-gray-200"

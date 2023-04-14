@@ -19,11 +19,11 @@ const Subhero = () => {
   return (
     <>
       <div className="container mx-auto pt-10 px-4 text-center">
-        <h1 class="text-3xl font-bold	">
+        <h1 className="text-3xl font-bold	">
           Discover the ultimate driving experience with our hassle-free car
           subscriptions.
         </h1>
-        <div class="flex flex-col items-center sm:items-center md:flex-row md:justify-around mt-10 pt-5">
+        <div className="flex flex-col items-center sm:items-center md:flex-row md:justify-around mt-10 pt-5">
           
           <div className={`flex-initial w-64 sm:h-10 ${styles.itemSpacing}`}>
             <h1 class="text-xl font-semibold">1. Choose your favourite vehicle</h1>
@@ -70,10 +70,10 @@ const Subhero = () => {
 
 
       <div className="container mx-auto mt-20 px-4 mt-10 text-center border-top pb-20">
-        <h1 class=" text-3xl font-bold">
+        <h1 className=" text-3xl font-bold">
           With our flexible car subscription service, you get:
         </h1>
-        <div class="mt-10 grid grid-cols-2 gap-10">
+        <div className="mt-10 grid grid-cols-2 gap-10">
           <div>
             <FontAwesomeIcon
               icon={faCarBurst}
