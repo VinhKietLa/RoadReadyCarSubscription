@@ -19,19 +19,19 @@ const Subhero = () => {
   return (
     <>
       <div className="container mx-auto px-4 text-center pt-16 pb-114">
-        <h1 className="text-3xl font-bold	">
+        <h1 className="text-3xl font-bold">
           Discover the ultimate driving experience with our hassle-free car
           subscriptions.
         </h1>
         <div className="flex flex-col items-center sm:items-center md:flex-row md:justify-around mt-10 pt-8">
           
-          <div className={`flex-initial w-64 sm:h-10 ${styles.itemSpacing}`}>
+          <div className={`flex-initial w-64 sm:h-10 mt-10 ${styles.itemSpacing}`}>
             <h1 className="text-xl font-semibold pb-6">1. Choose your favourite vehicle</h1>
             <FontAwesomeIcon
               icon={faCar}
               style={{ color: "#ff000d" }}
               size="7x"
-              className="mb-16"
+              className="mb-6"
             />
             <p className="">
               Choose from a wide range vehicles, from SUVs to Sports car we have it
@@ -39,18 +39,18 @@ const Subhero = () => {
             </p>
           </div>
 
-          <div className={`flex-initial w-64 ${styles.itemSpacing}`}>
+          <div className={`flex-initial w-64 mt-10 ${styles.itemSpacing}`}>
             <h1 className="text-xl font-semibold pb-6">2. Set your preferred terms</h1>
             <FontAwesomeIcon
               icon={faCalendarDays}
               style={{ color: "#ff000d" }}
               size="7x"
-              className="mb-16"
+              className="mb-6"
             />
-            <p>Customize your subscription to meet every your needs.</p>
+            <p>Customize your subscription and car to meet every your needs.</p>
           </div>
 
-          <div className={`flex-initial w-64 ${styles.itemSpacing}`}>
+          <div className={`flex-initial w-64 mt-10 ${styles.itemSpacing}`}>
             <h1 className="text-xl font-semibold pb-6">
               3. Hit the road - it's that simple!
             </h1>
@@ -58,7 +58,7 @@ const Subhero = () => {
               icon={faRoad}
               style={{ color: "#ff000d" }}
               size="7x"
-              className="mb-16"
+              className="mb-6"
             />
             <p>
               We’ll get you approved within the hour and offer same day delivery
@@ -146,10 +146,10 @@ const Subhero = () => {
               style={{ color: "#ff000d" }}
               size="4x"
             />
-            <p>Cancel Anytime</p>
+            <p>Cancel your subscription anytime</p>
           </div>
         </div>
-        <h1 className="text-center pt-20 font-bold text-lg">We also offer many other benefits including free road tax, car washes, discounts on fuel and much more! </h1>
+        <h1 className="text-center pt-20 font-bold text-2xl pb-14">We also offer many other benefits including <span className="text-red-500 font-bold">free road tax, car washes and fuel</span>.</h1>
       </div>
       
       <div className="container mx-auto mt-6 mb-8 px-5 flex flex-col md:flex-row items-center">
