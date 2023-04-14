@@ -18,44 +18,47 @@ import { faXmark } from "@fortawesome/free-solid-svg-icons";
 const Subhero = () => {
   return (
     <>
-      <div className="container mx-auto pt-10 px-4 text-center">
+      <div className="container mx-auto px-4 text-center pt-16 pb-114">
         <h1 className="text-3xl font-bold	">
           Discover the ultimate driving experience with our hassle-free car
           subscriptions.
         </h1>
-        <div className="flex flex-col items-center sm:items-center md:flex-row md:justify-around mt-10 pt-5">
+        <div className="flex flex-col items-center sm:items-center md:flex-row md:justify-around mt-10 pt-8">
           
           <div className={`flex-initial w-64 sm:h-10 ${styles.itemSpacing}`}>
-            <h1 className="text-xl font-semibold">1. Choose your favourite vehicle</h1>
+            <h1 className="text-xl font-semibold pb-6">1. Choose your favourite vehicle</h1>
             <FontAwesomeIcon
               icon={faCar}
               style={{ color: "#ff000d" }}
               size="7x"
+              className="mb-16"
             />
-            <p>
+            <p className="">
               Choose from a wide range vehicles, from SUVs to Sports car we have it
               available!
             </p>
           </div>
 
           <div className={`flex-initial w-64 ${styles.itemSpacing}`}>
-            <h1 className="text-xl font-semibold">2. Set your preferred terms</h1>
+            <h1 className="text-xl font-semibold pb-6">2. Set your preferred terms</h1>
             <FontAwesomeIcon
               icon={faCalendarDays}
               style={{ color: "#ff000d" }}
               size="7x"
+              className="mb-16"
             />
             <p>Customize your subscription to meet every your needs.</p>
           </div>
 
           <div className={`flex-initial w-64 ${styles.itemSpacing}`}>
-            <h1 className="text-xl font-semibold">
+            <h1 className="text-xl font-semibold pb-6">
               3. Hit the road - it's that simple!
             </h1>
             <FontAwesomeIcon
               icon={faRoad}
               style={{ color: "#ff000d" }}
               size="7x"
+              className="mb-16"
             />
             <p>
               We’ll get you approved within the hour and offer same day delivery
@@ -69,7 +72,7 @@ const Subhero = () => {
       </div>
 
 
-      <div className="container mx-auto mt-20 px-4 mt-10 text-center border-top pb-20">
+      <div className="mx-auto mt-20 px-4 mt-10 text-center border-top pb-2 bg-gray-900 text-white pt-16 pb-16">
         <h1 className=" text-3xl font-bold">
           With our flexible car subscription service, you get:
         </h1>
