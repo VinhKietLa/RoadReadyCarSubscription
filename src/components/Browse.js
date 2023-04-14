@@ -6,7 +6,7 @@ function Browse() {
   return (
     <>
       <div
-        className="container h-96 mt-20 bg-cover bg-center bg-no-repeat"
+        className=" m-auto h-96 mt-20 bg-cover w-full bg-center bg-no-repeat mb-0"
         style={{ backgroundImage: "url('./assets/browseAudi.png')" }}
       >
         <div className="text-center text-5xl text-white pt-16">
