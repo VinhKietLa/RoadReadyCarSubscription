@@ -154,11 +154,11 @@ const Subhero = () => {
       
       <div className="container mx-auto mt-6 mb-8 px-5 flex flex-col md:flex-row items-center">
       <div className = "flex flex-col text-center items-center">
-      <h1 className="w-full text-3xl mx-auto items-center"> <span className="text-red-500 font-semibold">Unlock the Road:</span> Download Our App and
+      <h1 className="w-fukk text-3xl mx-auto items-center"> <span className="text-red-500 font-semibold">Unlock the Road:</span> Download Our App and
       Experience Car Subscriptions Today!</h1>
-      <div className="flex mt-5">
+      <div className="flex flex-col md:flex-row mt-5">
       <button
-        className="px-6 py-2 text-white font-semibold rounded mr-4 h-20 w-60"
+        className="px-6 py-2 text-white font-semibold rounded mr-4 h-20 w-60 mb-6"
         style={{
           backgroundImage: "url('../assets/iosBtn.png')",
           backgroundSize: 'cover',
