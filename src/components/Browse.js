@@ -21,7 +21,7 @@ function Browse() {
       </div>
 
       <ModalFilter />
-      <CarCard />
+      {/* <CarCard /> */}
     </>
   );
 }

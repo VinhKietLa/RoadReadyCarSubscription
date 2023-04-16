@@ -401,7 +401,7 @@
     },
     {
         "id:": 21,
-        "name": "Telsa",
+        "name": "Tesla",
         "model": "Model Y Long Range AWD 5dr Auto",
         "Year": 2022,
         "Price": 830,
@@ -421,7 +421,7 @@
     },
     {
         "id:": 22,
-        "name": "Telsa",
+        "name": "Tesla",
         "model": "Model S 449kW 100kWh Dual Motor 5dr Auto",
         "Year": 2018,
         "Price": 900,
@@ -441,7 +441,7 @@
     },
     {
         "id:": 23,
-        "name": "Telsa",
+        "name": "Tesla",
         "model": "Model 3 Standard Plus 4dr Auto",
         "Year": 2020,
         "Price": 433,
@@ -461,7 +461,7 @@
     },
     {
         "id:": 24,
-        "name": "Telsa",
+        "name": "Tesla",
         "model": "Model 3 Performance AWD 4dr [Performance Upgrade] Auto",
         "Year": 2020,
         "Price": 600,
@@ -481,7 +481,7 @@
     },
     {
         "id:": 25,
-        "name": "Telsa",
+        "name": "Tesla",
         "model": "Model X Performance 245kW 75kWh Dual Motor 5dr Auto",
         "Year": 2018,
         "Price": 700,
