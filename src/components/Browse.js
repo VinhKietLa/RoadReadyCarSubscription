@@ -1,6 +1,7 @@
 import React from "react";
 import CarCard from "./CarCard";
 import "../index.css";
+import ModalFilter from "./Modal";
 
 function Browse() {
   return (
@@ -19,6 +20,7 @@ function Browse() {
         </h2>
       </div>
 
+      <ModalFilter />
       <CarCard />
     </>
   );
