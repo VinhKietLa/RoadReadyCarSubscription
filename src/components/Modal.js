@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faX } from "@fortawesome/free-solid-svg-icons";
 
-function ModalFilter({ selectedMake, setSelectedMake }) {
+function ModalFilter({ selectedMake, setSelectedMake ,minPrice, setMinPrice, maxPrice, setMaxPrice}) {
   // State and function for opening/closing modal
 
   const [isOpen, setIsOpen] = useState(true);
@@ -203,31 +203,31 @@ function ModalFilter({ selectedMake, setSelectedMake }) {
                     <div className="mt-2 w-full bg-white border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg">
                       <div className="py-1">
                         <button
-                          onClick={() => setSelectedMake("200")}
+                          onClick={() => setMinPrice(200)}
                           className="block px-4 py-2 text-gray-800 hover:bg-red-300 w-full"
                         >
                           £200
                         </button>
                         <button
-                          onClick={() => setSelectedMake("400")}
+                          onClick={() => setMinPrice(400)}
                           className="block px-4 py-2 text-gray-800 hover:bg-red-300 w-full"
                         >
                           £400
                         </button>
                         <button
-                          onClick={() => setSelectedMake("600")}
+                          onClick={() => setMinPrice(600)}
                           className="block px-4 py-2 text-gray-800 hover:bg-red-300 w-full"
                         >
                           £600
                         </button>
                         <button
-                          onClick={() => setSelectedMake("800")}
+                          onClick={() => setMinPrice(800)}
                           className="block px-4 py-2 text-gray-800 hover:bg-red-300 w-full"
                         >
                           £800
                         </button>
                         <button
-                          onClick={() => setSelectedMake("1000")}
+                          onClick={() => setMinPrice(1000)}
                           className="block px-4 py-2 text-gray-800 hover:bg-red-300 w-full"
                         >
                           £1000
@@ -266,25 +266,25 @@ function ModalFilter({ selectedMake, setSelectedMake }) {
                     <div className="mt-2 w-full bg-white border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg">
                       <div className="py-1">
                         <button
-                          onClick={() => setSelectedMake("400")}
+                          onClick={() => setMaxPrice(400)}
                           className="block px-4 py-2 text-gray-800 hover:bg-red-300 w-full"
                         >
                           £400
                         </button>
                         <button
-                          onClick={() => setSelectedMake("600")}
+                          onClick={() => setMaxPrice(600)}
                           className="block px-4 py-2 text-gray-800 hover:bg-red-300 w-full"
                         >
                           £600
                         </button>
                         <button
-                          onClick={() => setSelectedMake("800")}
+                          onClick={() => setMaxPrice(800)}
                           className="block px-4 py-2 text-gray-800 hover:bg-red-300 w-full"
                         >
                           £800
                         </button>
                         <button
-                          onClick={() => setSelectedMake("1000")}
+                          onClick={() => setMaxPrice(1000)}
                           className="block px-4 py-2 text-gray-800 hover:bg-red-300 w-full"
                         >
                           £1000

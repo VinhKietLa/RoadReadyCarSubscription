@@ -1,7 +1,7 @@
 import carData from "../cars.json";
 import Footer from "./Footer.js";
 
-function CarCard({ selectedMake }) {
+function CarCard({ selectedMake , minPrice, maxPrice }) {
 
   return (
     <>
@@ -9,9 +9,11 @@ function CarCard({ selectedMake }) {
       {carData
                       .filter(
                         (car) =>
-                          !selectedMake ||
+                          (!selectedMake ||
                           car.name === selectedMake ||
-                          car.model === selectedMake
+                          car.model === selectedMake ) &&
+                          (!minPrice || car.Price >= minPrice) &&
+                          (!maxPrice || car.Price <= maxPrice)
                       )
                       .map((car) => {
                         return(
@@ -48,7 +50,6 @@ function CarCard({ selectedMake }) {
                             <h1 className="text-black text-2xl">
                               Price: £{car.Price}/ per month
                             </h1>
-
                             <button className="bg-red-500 text-black px-4 py-2 rounded-lg">
                               View Car
                             </button>

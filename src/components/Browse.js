@@ -4,9 +4,9 @@ import "../index.css";
 import ModalFilter from "./Modal";
 
 function Browse() {
-
   const [selectedMake, setSelectedMake] = useState(null);
-
+  const [minPrice, setMinPrice] = useState(null);
+  const [maxPrice, setMaxPrice] = useState(null);
 
   return (
     <>
@@ -15,7 +15,7 @@ function Browse() {
         style={{ backgroundImage: "url('./assets/browseAudi.png')" }}
       >
         <div className="text-center text-5xl text-white pt-16">
-        <h1>Browse Our Car Range</h1>
+          <h1>Browse Our Car Range</h1>
         </div>
         <h2 className=" w-1/3 text-white mt-8 ml-6">
           Choose from our range of vehicles from hatchbacks to convertibles we
@@ -24,8 +24,15 @@ function Browse() {
         </h2>
       </div>
 
-      <ModalFilter selectedMake={selectedMake} setSelectedMake={setSelectedMake} />
-      <CarCard selectedMake={selectedMake} />
+      <ModalFilter
+        selectedMake={selectedMake}
+        setSelectedMake={setSelectedMake}
+        minPrice={minPrice}
+        setMinPrice={setMinPrice}
+        maxPrice={maxPrice}
+        setMaxPrice={setMaxPrice}
+      />
+      <CarCard selectedMake={selectedMake} minPrice={minPrice} maxPrice={maxPrice}/>
     </>
   );
 }
