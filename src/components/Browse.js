@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import CarCard from "./CarCard";
 import "../index.css";
 import ModalFilter from "./Modal";
 
 function Browse() {
+
+  const [selectedMake, setSelectedMake] = useState(null);
+
+
   return (
     <>
       <div
@@ -20,8 +24,8 @@ function Browse() {
         </h2>
       </div>
 
-      <ModalFilter />
-      {/* <CarCard /> */}
+      <ModalFilter selectedMake={selectedMake} setSelectedMake={setSelectedMake} />
+      <CarCard selectedMake={selectedMake} />
     </>
   );
 }

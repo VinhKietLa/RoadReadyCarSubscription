@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import carData from "../cars.json";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faX } from "@fortawesome/free-solid-svg-icons";
 
-function ModalFilter() {
+function ModalFilter({ selectedMake, setSelectedMake }) {
   // State and function for opening/closing modal
 
   const [isOpen, setIsOpen] = useState(true);
@@ -18,9 +19,13 @@ function ModalFilter() {
 
   const [makeOpen, setMakeOpen] = useState(false);
 
-  //State for selected make
+  // State and function for Make dropdown
 
-  const [selectedMake, setSelectedMake] = useState(null);
+  const [minPriceOpen, setminPriceOpen] = useState(false);
+
+  // State and function for Make dropdown
+
+  const [maxPriceOpen, setmaxPriceOpen] = useState(false);
 
   return (
     <>
@@ -42,16 +47,24 @@ function ModalFilter() {
             ></div>
 
             {/* Modal content */}
-            <div className="inline-block align-middle bg-white rounded p-8 my-8 text-left w-1/2 shadow-xl transform transition-all">
-              <h2 className="text-2xl font-bold mb-4">Filter by</h2>
+            <div className="flex flex-col bg-white rounded p-8 my-8 mx-auto w-1/2 shadow-xl transform transition-all">
+              <h2 className="text-2xl font-bold mb-4">
+                Filter by {/* Close button */}
+                <button
+                  onClick={closeModal}
+                  className="mt-4 bg-blue-500 hover:bg-red-500 text-white rounded w-1/12"
+                >
+                  <FontAwesomeIcon icon={faX} />
+                </button>
+              </h2>
 
-              <div className="relative inline-block">
+              <div className="makeSelectBtn relative">
                 {/* Button to toggle the dropdown */}
-                <div className="makeSelectBtn relative">
+                <div>
                   <p>Make</p>
                   <button
                     onClick={() => setMakeOpen(!makeOpen)}
-                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-flex items-center"
+                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-flex items-center w-full"
                   >
                     <span>Select</span>
                     <svg
@@ -68,45 +81,46 @@ function ModalFilter() {
                     </svg>
                   </button>
 
-                  {/* Dropdown menu */}
+                  {/* Dropdown Make menu */}
                   {makeOpen && (
-                    <div className="absolute mt-2 w-48 bg-white border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg">
+                    <div className="mt-2 w-full bg-white border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg">
                       <div className="py-1">
                         <button
                           onClick={() => setSelectedMake("Audi")}
-                          className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                          className="block px-4 py-2 text-gray-800 hover:bg-red-300 w-full"
                         >
                           Audi
                         </button>
                         <button
                           onClick={() => setSelectedMake("BMW")}
-                          className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                          className="block px-4 py-2 text-gray-800 hover:bg-red-300 w-full"
                         >
                           BMW
                         </button>
                         <button
                           onClick={() => setSelectedMake("Honda")}
-                          className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                          className="block px-4 py-2 text-gray-800 hover:bg-red-300 w-full"
                         >
                           Honda
                         </button>
                         <button
                           onClick={() => setSelectedMake("Mercedes")}
-                          className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                          className="block px-4 py-2 text-gray-800 hover:bg-red-300 w-full"
                         >
                           Mercedes
                         </button>
                         <button
                           onClick={() => setSelectedMake("Tesla")}
-                          className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                          className="block px-4 py-2 text-gray-800 hover:bg-red-300 w-full"
                         >
                           Tesla
                         </button>
                       </div>
                     </div>
                   )}
+
                   {/* Car cards component */}
-                  <div className="mx-auto mt-5 flex flex-wrap justify-center mb-10">
+                  {/* <div className="mx-auto mt-5 flex flex-wrap justify-center mb-10">
                     {carData
                       .filter(
                         (car) =>
@@ -157,16 +171,129 @@ function ModalFilter() {
                         </div>
                         );
                       })}
-                  </div>
+                  </div> */}
                 </div>
               </div>
-              {/* Close button */}
-              <button
-                onClick={closeModal}
-                className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-              >
-                Close Filter
-              </button>
+
+              <div className="minPriceBtn relative">
+                {/* Button to toggle the dropdown */}
+                <div>
+                  <p>Monthly Price</p>
+                  <button
+                    onClick={() => setminPriceOpen(!minPriceOpen)}
+                    className="bg-blue-500 w-full hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-flex items-center"
+                  >
+                    <span>Min</span>
+                    <svg
+                      className="w-4 h-4 ml-2"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M10 12a2 2 0 100-4 2 2 0 000 4zm-7-2a7 7 0 1114 0 7 7 0 01-14 0z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </button>
+
+                  {/* Dropdown Make menu */}
+                  {minPriceOpen && (
+                    <div className="mt-2 w-full bg-white border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg">
+                      <div className="py-1">
+                        <button
+                          onClick={() => setSelectedMake("200")}
+                          className="block px-4 py-2 text-gray-800 hover:bg-red-300 w-full"
+                        >
+                          £200
+                        </button>
+                        <button
+                          onClick={() => setSelectedMake("400")}
+                          className="block px-4 py-2 text-gray-800 hover:bg-red-300 w-full"
+                        >
+                          £400
+                        </button>
+                        <button
+                          onClick={() => setSelectedMake("600")}
+                          className="block px-4 py-2 text-gray-800 hover:bg-red-300 w-full"
+                        >
+                          £600
+                        </button>
+                        <button
+                          onClick={() => setSelectedMake("800")}
+                          className="block px-4 py-2 text-gray-800 hover:bg-red-300 w-full"
+                        >
+                          £800
+                        </button>
+                        <button
+                          onClick={() => setSelectedMake("1000")}
+                          className="block px-4 py-2 text-gray-800 hover:bg-red-300 w-full"
+                        >
+                          £1000
+                        </button>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              <div className="maxSelectBtn relative">
+                {/* Button to toggle the dropdown */}
+                <div class="relative">
+                  <p>Monthly Price</p>
+                  <button
+                    onClick={() => setmaxPriceOpen(!maxPriceOpen)}
+                    className="bg-blue-500 w-full hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-flex items-center"
+                  >
+                    <span>Max</span>
+                    <svg
+                      className="w-4 h-4 ml-2"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M10 12a2 2 0 100-4 2 2 0 000 4zm-7-2a7 7 0 1114 0 7 7 0 01-14 0z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </button>
+
+                  {/* Dropdown Make menu */}
+                  {maxPriceOpen && (
+                    <div className="mt-2 w-full bg-white border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg">
+                      <div className="py-1">
+                        <button
+                          onClick={() => setSelectedMake("400")}
+                          className="block px-4 py-2 text-gray-800 hover:bg-red-300 w-full"
+                        >
+                          £400
+                        </button>
+                        <button
+                          onClick={() => setSelectedMake("600")}
+                          className="block px-4 py-2 text-gray-800 hover:bg-red-300 w-full"
+                        >
+                          £600
+                        </button>
+                        <button
+                          onClick={() => setSelectedMake("800")}
+                          className="block px-4 py-2 text-gray-800 hover:bg-red-300 w-full"
+                        >
+                          £800
+                        </button>
+                        <button
+                          onClick={() => setSelectedMake("1000")}
+                          className="block px-4 py-2 text-gray-800 hover:bg-red-300 w-full"
+                        >
+                          £1000
+                        </button>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
             </div>
           </div>
         </div>
