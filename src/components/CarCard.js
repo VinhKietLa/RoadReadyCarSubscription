@@ -79,7 +79,7 @@ function CarCard({ selectedMake, minPrice, maxPrice }) {
               <div className="absolute inset-0 bg-gray-600 opacity-75"></div>
             </div>
             <div
-              className="bg-white rounded-lg overflow-hidden shadow-xl transform transition-all w-1/2 mx-auto"
+              className="bg-white rounded-lg overflow-hidden shadow-xl transform transition-all w-9/12 mx-auto"
               role="dialog"
               aria-modal="true"
               aria-labelledby="modal-headline"
@@ -111,8 +111,8 @@ function CarCard({ selectedMake, minPrice, maxPrice }) {
                 </div>
               </div>
 
-              <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 flex justify-between">
-                <div className="text-left w-96">
+              <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 flex-col md:flex-row justify-between">
+                <div className="text-left w-full">
                   <h2 className="text-xl font-black">
                     {selectedCar.name} {selectedCar.model}
                   </h2>
@@ -122,7 +122,7 @@ function CarCard({ selectedMake, minPrice, maxPrice }) {
                   <p className="font-black">{selectedCar.transmission}</p>
                 </div>
 
-                <div className="md:mr-12 self-center">
+                <div className="md:mr-12 self-center mt-4">
                   <p className="text-2xl font-black">
                     £{selectedCar.Price} <span className="text-lg">/month</span>
                   </p>
@@ -136,24 +136,14 @@ function CarCard({ selectedMake, minPrice, maxPrice }) {
                   </button>
                 </div>
 
-                {/* <h3>{selectedCar.model}</h3>
-                <p>Color: {selectedCar.color}</p>
-                <p>Doors: {selectedCar.Year}</p>
-                <p>Seats: {selectedCar.mileage}</p>
-                <h4 className="text-xl text-bold">Features:</h4>
-                <ul>
-                  {selectedCar.features.map((feature, index) => (
-                    <li key={index}>{feature}</li>
-                  ))}
-                </ul> */}
               </div>
               <h2 className="font-bold text-xl text-left px-4">
                 Your car overview
               </h2>
 
-              <div className="flex justify-between mt-6 px-4">
+              <div className="flex justify-between mt-6 px-4 flex flex-col md:flex-row">
                 <div className="mechanical">
-                  <h1 className="text-xl font-black">Mechanical</h1>
+                  <h1 className="text-xl font-black mt-4 mb-4 border-red-500 border-x-2">Mechanical</h1>
                   <p>Transmission: {selectedCar.transmission}</p>
                   <p>Mileage: {selectedCar.mileage}</p>
                   <p>Engine: {selectedCar.engine}</p>
@@ -162,7 +152,7 @@ function CarCard({ selectedMake, minPrice, maxPrice }) {
                 </div>
 
                 <div className="trim">
-                  <h1 className="text-xl font-black">Trim</h1>
+                  <h1 className="text-xl font-black mt-4 mb-4 border-red-500 border-x-2">Trim</h1>
                   <p>Body: {selectedCar.body}</p>
                   <p>Color: {selectedCar.color}</p>
                   <p>Doors: {selectedCar.doors}</p>
@@ -170,7 +160,7 @@ function CarCard({ selectedMake, minPrice, maxPrice }) {
                 </div>
 
                 <div className="features">
-                  <h1 className="text-xl font-black">Key features include</h1>
+                  <h1 className="text-xl font-black mt-4 mb-4 border-red-500 border-x-2 px-4">Key features include</h1>
                   <ul>
                     {selectedCar.features.map((feature, index) => (
                       <li key={index}>{feature}</li>

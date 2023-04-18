@@ -65,13 +65,15 @@ const Navbar = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink
-              to="/sign-in"
-              activeClassName="text-gray-200"
-              className="hover:text-gray-200"
-            >
-              Sign in
-            </NavLink>
+            <button className="px-6 py-2 bg-red-500 hover:bg-green-600 font-semibold rounded hover:text-white">
+              <NavLink
+                to="/sign-in"
+                activeClassName="text-gray-200"
+                className="hover:text-gray-200"
+              >
+                <span className="text-white"> Sign in</span>
+              </NavLink>
+            </button>
           </li>
           <li>
             <button className="px-6 py-2 bg-red-500 hover:bg-green-600 font-semibold rounded hover:text-white">
@@ -80,18 +82,18 @@ const Navbar = () => {
                 activeClassName="text-gray-200"
                 className="hover:text-gray-200"
               >
-                Register
+                <span className="text-white"> Register</span>
               </NavLink>
             </button>
           </li>
         </ul>
-          {/* Burger Icon */}
-          <div
-            className="md:hidden cursor-pointer"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            <FontAwesomeIcon icon={faBars} />{" "}
-          </div>
+        {/* Burger Icon */}
+        <div
+          className="md:hidden cursor-pointer"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          <FontAwesomeIcon icon={faBars} />{" "}
+        </div>
       </nav>
     </div>
   );
