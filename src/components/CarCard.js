@@ -78,7 +78,7 @@ function CarCard({ selectedMake, minPrice, maxPrice }) {
               className="fixed inset-0 transition-opacity"
               aria-hidden="true"
             >
-              <div className="absolute inset-0 bg-gray-500 opacity-75"></div>
+              <div className="absolute inset-0 bg-gray-600 opacity-75"></div>
             </div>
             <div
               className="bg-white rounded-lg overflow-hidden shadow-xl transform transition-all w-1/2 mx-auto"
@@ -113,19 +113,74 @@ function CarCard({ selectedMake, minPrice, maxPrice }) {
                 </div>
               </div>
 
-              <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-                <h2>Your car overview</h2>
-                <h3>{selectedCar.model}</h3>
+              <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 flex justify-between">
+                <div className="text-left">
+                  <h2 className="text-xl font-black">
+                    {selectedCar.name} {selectedCar.model}
+                  </h2>
+                  <p className="font-black">{selectedCar.Year}</p>
+                  <p className="font-black">{selectedCar.mileage} miles</p>
+                  <p className="font-black">{selectedCar.fuel}</p>
+                  <p className="font-black">{selectedCar.transmission}</p>
+                </div>
+
+                <div className="md:mr-12 self-center">
+                  <p className="text-2xl font-black">
+                    £{selectedCar.Price} <span className="text-lg">/month</span>
+                  </p>
+
+                  <button
+                    type="button"
+                    className="bg-red-500 text-white px-4 py-2 rounded-lg mt-4"
+                    onClick={closeModal}
+                  >
+                    Buy Now
+                  </button>
+                </div>
+
+                {/* <h3>{selectedCar.model}</h3>
                 <p>Color: {selectedCar.color}</p>
-                <p>Doors: {selectedCar.doors}</p>
-                <p>Seats: {selectedCar.seats}</p>
-                <h4>Features:</h4>
+                <p>Doors: {selectedCar.Year}</p>
+                <p>Seats: {selectedCar.mileage}</p>
+                <h4 className="text-xl text-bold">Features:</h4>
                 <ul>
                   {selectedCar.features.map((feature, index) => (
                     <li key={index}>{feature}</li>
                   ))}
-                </ul>
+                </ul> */}
               </div>
+              <h2 className="font-bold text-xl text-left px-4">
+                Your car overview
+              </h2>
+
+              <div className="flex justify-between mt-6 px-4">
+                <div className="mechanical">
+                  <h1 className="text-xl font-black">Mechanical</h1>
+                  <p>Transmission: {selectedCar.transmission}</p>
+                  <p>Mileage: {selectedCar.mileage}</p>
+                  <p>Engine: {selectedCar.engine}</p>
+                  <p>Fuel: {selectedCar.fuel}</p>
+                  <p>Drive type: {selectedCar.drivetype}</p>
+                </div>
+
+                <div className="trim">
+                  <h1 className="text-xl font-black">Trim</h1>
+                  <p>Body: {selectedCar.body}</p>
+                  <p>Color: {selectedCar.color}</p>
+                  <p>Doors: {selectedCar.doors}</p>
+                  <p>Seats: {selectedCar.seats}</p>
+                </div>
+
+                <div className="features">
+                  <h1 className="text-xl font-black">Key features include</h1>
+                  <ul>
+                    {selectedCar.features.map((feature, index) => (
+                      <li key={index}>{feature}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
               <div className="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
                 <button
                   type="button"
