@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../CSS/Subhero.module.css";
+import { NavLink } from "react-router-dom";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCar } from "@fortawesome/free-solid-svg-icons";
@@ -66,9 +67,13 @@ const Subhero = () => {
             </p>
           </div>
         </div>
-        <button className="mt-20 px-6 py-2 bg-red-500 hover:bg-green-600 text-white font-semibold rounded">
-          Let's Drive!
-        </button>
+        <button className="mt-8 px-6 py-2 bg-red-500 hover:bg-green-600 text-white font-semibold rounded mr-4"><NavLink
+              to="/browse"
+              activeClassName="text-gray-200"
+              className="hover:text-gray-200"
+            >
+              Lets Drive!
+            </NavLink></button>
       </div>
 
 

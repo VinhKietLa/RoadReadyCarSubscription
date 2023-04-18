@@ -2,7 +2,14 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faX } from "@fortawesome/free-solid-svg-icons";
 
-function ModalFilter({ selectedMake, setSelectedMake ,minPrice, setMinPrice, maxPrice, setMaxPrice}) {
+function ModalFilter({
+  selectedMake,
+  setSelectedMake,
+  minPrice,
+  setMinPrice,
+  maxPrice,
+  setMaxPrice,
+}) {
   // State and function for opening/closing modal
 
   const [isOpen, setIsOpen] = useState(true);
@@ -13,6 +20,21 @@ function ModalFilter({ selectedMake, setSelectedMake ,minPrice, setMinPrice, max
 
   const closeModal = () => {
     setIsOpen(false);
+  };
+
+  // State and function for tracking whether the button is clicked in the dropdown to display it or not
+
+  // const [isOpenMake, setIsOpenMake] = useState(true);
+  // const [makeOpenMake, setMakeOpenMake] = useState(false);
+  // const [selectedMakeBtn, setSelectedMakeBtn] = useState("Select");
+
+  const closeModalMake = () => {
+    setIsOpen(false);
+  };
+
+  const handleMakeClick = (value) => {
+    setSelectedMake(value);
+    setMakeOpen(false);
   };
 
   // State and function for Make dropdown
@@ -66,7 +88,7 @@ function ModalFilter({ selectedMake, setSelectedMake ,minPrice, setMinPrice, max
                     onClick={() => setMakeOpen(!makeOpen)}
                     className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-flex items-center w-full"
                   >
-                    <span>Select</span>
+                    <span>{selectedMake}</span>
                     <svg
                       className="w-4 h-4 ml-2"
                       xmlns="http://www.w3.org/2000/svg"
@@ -86,31 +108,31 @@ function ModalFilter({ selectedMake, setSelectedMake ,minPrice, setMinPrice, max
                     <div className="mt-2 w-full bg-white border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg">
                       <div className="py-1">
                         <button
-                          onClick={() => setSelectedMake("Audi")}
+                          onClick={() => handleMakeClick("Audi")}
                           className="block px-4 py-2 text-gray-800 hover:bg-red-300 w-full"
                         >
                           Audi
                         </button>
                         <button
-                          onClick={() => setSelectedMake("BMW")}
+                          onClick={() => handleMakeClick("BMW")}
                           className="block px-4 py-2 text-gray-800 hover:bg-red-300 w-full"
                         >
                           BMW
                         </button>
                         <button
-                          onClick={() => setSelectedMake("Honda")}
+                          onClick={() => handleMakeClick("Honda")}
                           className="block px-4 py-2 text-gray-800 hover:bg-red-300 w-full"
                         >
                           Honda
                         </button>
                         <button
-                          onClick={() => setSelectedMake("Mercedes")}
+                          onClick={() => handleMakeClick("Mercedes")}
                           className="block px-4 py-2 text-gray-800 hover:bg-red-300 w-full"
                         >
                           Mercedes
                         </button>
                         <button
-                          onClick={() => setSelectedMake("Tesla")}
+                          onClick={() => handleMakeClick("Tesla")}
                           className="block px-4 py-2 text-gray-800 hover:bg-red-300 w-full"
                         >
                           Tesla
@@ -294,6 +316,12 @@ function ModalFilter({ selectedMake, setSelectedMake ,minPrice, setMinPrice, max
                   )}
                 </div>
               </div>
+              <button
+                className="mt-8 px-6 py-2 bg-red-500 hover:bg-green-600 text-white font-semibold rounded mr-4 w-1/4"
+                onClick={closeModal}
+              >
+                View Cars
+              </button>
             </div>
           </div>
         </div>
