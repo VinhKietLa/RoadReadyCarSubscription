@@ -22,15 +22,7 @@ function ModalFilter({
     setIsOpen(false);
   };
 
-  // State and function for tracking whether the button is clicked in the dropdown to display it or not
-
-  // const [isOpenMake, setIsOpenMake] = useState(true);
-  // const [makeOpenMake, setMakeOpenMake] = useState(false);
-  // const [selectedMakeBtn, setSelectedMakeBtn] = useState("Select");
-
-  const closeModalMake = () => {
-    setIsOpen(false);
-  };
+  //Function for handling the Make dropdown, sets the make as the dropdown text
 
   const handleMakeClick = (value) => {
     setSelectedMake(value);
@@ -41,11 +33,25 @@ function ModalFilter({
 
   const [makeOpen, setMakeOpen] = useState(false);
 
-  // State and function for Make dropdown
+  //Function for handling the Min dropdown, sets the min as the dropdown text
+
+  const handleMinClick = (value) => {
+    setMinPrice(value);
+    setMakeOpen(false);
+  };
+
+  // State and function for Min dropdown
 
   const [minPriceOpen, setminPriceOpen] = useState(false);
 
-  // State and function for Make dropdown
+   //Function for handling the Max dropdown, sets the Max as the dropdown text
+
+   const handleMaxClick = (value) => {
+    setMaxPrice(value);
+    setMakeOpen(false);
+  };
+
+  // State and function for Max dropdown
 
   const [maxPriceOpen, setmaxPriceOpen] = useState(false);
 
@@ -88,7 +94,7 @@ function ModalFilter({
                     onClick={() => setMakeOpen(!makeOpen)}
                     className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-flex items-center w-full"
                   >
-                    <span>{selectedMake}</span>
+                    <span>{selectedMake === "Select" ? "Select" : selectedMake}</span>
                     <svg
                       className="w-4 h-4 ml-2"
                       xmlns="http://www.w3.org/2000/svg"
@@ -205,7 +211,7 @@ function ModalFilter({
                     onClick={() => setminPriceOpen(!minPriceOpen)}
                     className="bg-blue-500 w-full hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-flex items-center"
                   >
-                    <span>Min</span>
+                    <span>{minPrice === "Min" ? "Min" : "£" +minPrice}</span>
                     <svg
                       className="w-4 h-4 ml-2"
                       xmlns="http://www.w3.org/2000/svg"
@@ -225,31 +231,31 @@ function ModalFilter({
                     <div className="mt-2 w-full bg-white border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg">
                       <div className="py-1">
                         <button
-                          onClick={() => setMinPrice(200)}
+                          onClick={() => handleMinClick(200)}
                           className="block px-4 py-2 text-gray-800 hover:bg-red-300 w-full"
                         >
                           £200
                         </button>
                         <button
-                          onClick={() => setMinPrice(400)}
+                          onClick={() => handleMinClick(400)}
                           className="block px-4 py-2 text-gray-800 hover:bg-red-300 w-full"
                         >
                           £400
                         </button>
                         <button
-                          onClick={() => setMinPrice(600)}
+                          onClick={() => handleMinClick(600)}
                           className="block px-4 py-2 text-gray-800 hover:bg-red-300 w-full"
                         >
                           £600
                         </button>
                         <button
-                          onClick={() => setMinPrice(800)}
+                          onClick={() => handleMinClick(800)}
                           className="block px-4 py-2 text-gray-800 hover:bg-red-300 w-full"
                         >
                           £800
                         </button>
                         <button
-                          onClick={() => setMinPrice(1000)}
+                          onClick={() => handleMinClick(1000)}
                           className="block px-4 py-2 text-gray-800 hover:bg-red-300 w-full"
                         >
                           £1000
@@ -268,7 +274,7 @@ function ModalFilter({
                     onClick={() => setmaxPriceOpen(!maxPriceOpen)}
                     className="bg-blue-500 w-full hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-flex items-center"
                   >
-                    <span>Max</span>
+                    <span>{maxPrice === "Max" ? "Max": "£" +maxPrice}</span>
                     <svg
                       className="w-4 h-4 ml-2"
                       xmlns="http://www.w3.org/2000/svg"
@@ -288,25 +294,25 @@ function ModalFilter({
                     <div className="mt-2 w-full bg-white border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg">
                       <div className="py-1">
                         <button
-                          onClick={() => setMaxPrice(400)}
+                          onClick={() => handleMaxClick(400)}
                           className="block px-4 py-2 text-gray-800 hover:bg-red-300 w-full"
                         >
                           £400
                         </button>
                         <button
-                          onClick={() => setMaxPrice(600)}
+                          onClick={() => handleMaxClick(600)}
                           className="block px-4 py-2 text-gray-800 hover:bg-red-300 w-full"
                         >
                           £600
                         </button>
                         <button
-                          onClick={() => setMaxPrice(800)}
+                          onClick={() => handleMaxClick(800)}
                           className="block px-4 py-2 text-gray-800 hover:bg-red-300 w-full"
                         >
                           £800
                         </button>
                         <button
-                          onClick={() => setMaxPrice(1000)}
+                          onClick={() => handleMaxClick(1000)}
                           className="block px-4 py-2 text-gray-800 hover:bg-red-300 w-full"
                         >
                           £1000
