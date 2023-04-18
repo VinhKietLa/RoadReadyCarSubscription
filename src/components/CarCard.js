@@ -28,48 +28,46 @@ function CarCard({ selectedMake, minPrice, maxPrice }) {
               (!maxPrice || car.Price <= maxPrice)
           )
           .map((car) => {
-            return (
-              <div
-                className="max-w-sm bg-neutral-300 shadow-lg rounded-lg overflow-hidden mx-2 mx-auto w-full"
-                key={car.id}
-              >
-                <img
-                  className="w-full h-64 object-cover mt-1"
-                  src={car.image}
-                  alt="Car"
-                />
-                <div className="p-4">
-                  <h2 className="text-3xl font-semibold mb-2">{car.name}</h2>
-                  <h3>{car.model}</h3>
-                  <ul className="flex justify-evenly pt-5 text-center">
-                    <li className="rounded-full border-rose-500 border-solid border-2 p-2">
-                      {car.Year}
-                    </li>
-                    <li className="rounded-full border-rose-500 border-solid border-2 p-2">
-                      {car.transmission}
-                    </li>
-                    <li className="rounded-full border-rose-500 border-solid border-2 p-2">
-                      {car.fuel}
-                    </li>
-                    <li className="rounded-full border-rose-500 border-solid border-2 p-2">
-                      {car.color}
-                    </li>
-                  </ul>
-                </div>
-                <div className="p-2 flex justify-evenly items-center">
-                  <h1 className="text-black text-xl">
-                    Price: £{car.Price}/month
-                  </h1>
-                  <button
-                    className="bg-red-500 text-black px-4 py-2 rounded-lg"
-                    onClick={() => handleViewCar(car)}
-                  >
-                    View Car
-                  </button>
-                </div>
-              </div>
-            );
-          })}
+  return (
+    <div
+      className="max-w-sm bg-neutral-300 shadow-lg rounded-lg overflow-hidden mx-2 mx-auto w-full"
+      key={car.id}
+    >
+      <img
+        className="w-full h-64 object-cover mt-1"
+        src={car.image}
+        alt="Car"
+      />
+      <div className="p-4">
+        <div className="flex flex-col h-20 justify-between">
+          <h2 className="text-3xl font-semibold mb-2">{car.name}</h2>
+          <h3>{car.model}</h3>
+        </div>
+        <div className="flex flex-col h-16 justify-between">
+          <ul className="flex justify-evenly pt-4 text-center">
+           <li className="border-red-500 border-2 rounded px-3">{car.Year}</li>
+           <li className="border-red-500 border-2 rounded px-3" >{car.transmission}</li>
+           <li className="border-red-500 border-2 rounded px-3">{car.color}</li>
+           <li className="border-red-500 border-2 rounded px-3">{car.Year}</li>
+          </ul>
+        </div>
+      </div>
+      <div className="p-2">
+        <div className="flex flex-col h-16 justify-between">
+          <h1 className="text-black text-xl">
+            Price: £{car.Price}/month
+          </h1>
+          <button
+            className="bg-red-500 hover:bg-green-600 text-black px-4 py-2 rounded-lg"
+            onClick={() => handleViewCar(car)}
+          >
+            View Car
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+})}
       </div>
       {showModal && selectedCar && (
         <div className="fixed z-10 inset-0 overflow-y-auto">

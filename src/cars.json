@@ -14,7 +14,7 @@
         "fuel": "Petrol",
         "drivetype": "Front-wheel drive",
         "body": "Hatchback",
-        "color": "blue",
+        "color": "Blue",
         "doors": 5,
         "seats": 5,
         "features": ["Privacy Glass", "Parking Sensors", "Electric Windows", "Auto headlights"]
