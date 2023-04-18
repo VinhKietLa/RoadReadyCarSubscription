@@ -33,11 +33,12 @@ function ModalFilter({
 
   const [makeOpen, setMakeOpen] = useState(false);
 
-  //Function for handling the Min dropdown, sets the min as the dropdown text
+
+  //Function for handling the Make dropdown, sets the min as the dropdown text
 
   const handleMinClick = (value) => {
     setMinPrice(value);
-    setMakeOpen(false);
+    setminPriceOpen(false);
   };
 
   // State and function for Min dropdown
@@ -48,7 +49,7 @@ function ModalFilter({
 
    const handleMaxClick = (value) => {
     setMaxPrice(value);
-    setMakeOpen(false);
+    setmaxPriceOpen(false);
   };
 
   // State and function for Max dropdown
@@ -94,7 +95,7 @@ function ModalFilter({
                     onClick={() => setMakeOpen(!makeOpen)}
                     className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-flex items-center w-full"
                   >
-                    <span>{selectedMake === "Select" ? "Select" : selectedMake}</span>
+                    <span>{selectedMake === null ? "Select" : selectedMake}</span>
                     <svg
                       className="w-4 h-4 ml-2"
                       xmlns="http://www.w3.org/2000/svg"
@@ -211,7 +212,7 @@ function ModalFilter({
                     onClick={() => setminPriceOpen(!minPriceOpen)}
                     className="bg-blue-500 w-full hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-flex items-center"
                   >
-                    <span>{minPrice === "Min" ? "Min" : "£" +minPrice}</span>
+                    <span>{minPrice === null ? "Min" : "£" +minPrice}</span>
                     <svg
                       className="w-4 h-4 ml-2"
                       xmlns="http://www.w3.org/2000/svg"
@@ -274,7 +275,7 @@ function ModalFilter({
                     onClick={() => setmaxPriceOpen(!maxPriceOpen)}
                     className="bg-blue-500 w-full hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-flex items-center"
                   >
-                    <span>{maxPrice === "Max" ? "Max": "£" +maxPrice}</span>
+                    <span>{maxPrice === null ? "Max": "£" +maxPrice}</span>
                     <svg
                       className="w-4 h-4 ml-2"
                       xmlns="http://www.w3.org/2000/svg"

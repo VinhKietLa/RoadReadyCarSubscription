@@ -4,9 +4,9 @@ import "../index.css";
 import ModalFilter from "./Modal";
 
 function Browse() {
-  const [selectedMake, setSelectedMake] = useState("Select");
-  const [minPrice, setMinPrice] = useState("Min");
-  const [maxPrice, setMaxPrice] = useState("Max");
+  const [selectedMake, setSelectedMake] = useState(null);
+  const [minPrice, setMinPrice] = useState(null);
+  const [maxPrice, setMaxPrice] = useState(null);
 
   return (
     <>
