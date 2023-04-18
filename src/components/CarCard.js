@@ -169,7 +169,7 @@ function CarCard({ selectedMake, minPrice, maxPrice }) {
                 </div>
               </div>
 
-              <div className="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+              <div className="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse justify-center">
                 <button
                   type="button"
                   className="bg-red-500 text-white px-4 py-2 rounded-lg"
