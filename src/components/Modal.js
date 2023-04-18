@@ -12,7 +12,7 @@ function ModalFilter({
 }) {
   // State and function for opening/closing modal
 
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   const openModal = () => {
     setIsOpen(true);
