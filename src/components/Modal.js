@@ -61,7 +61,7 @@ function ModalFilter({
       {/* Button to open the modal */}
       <button
         onClick={openModal}
-        className="bg-red-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+        className="bg-red-500 hover:bg-green-700 text-white font-bold py-2 px-4 ml-6 rounded"
       >
         Show filters +
       </button>
@@ -76,12 +76,12 @@ function ModalFilter({
             ></div>
 
             {/* Modal content */}
-            <div className="flex flex-col bg-white rounded p-8 my-8 mx-auto w-1/2 shadow-xl transform transition-all">
+            <div className="flex flex-col bg-white rounded p-6 md:p-8  my-8 mx-auto w-1/2 shadow-xl transform transition-all">
               <h2 className="text-2xl font-bold mb-4">
                 Filter by {/* Close button */}
                 <button
                   onClick={closeModal}
-                  className="mt-4 bg-blue-500 hover:bg-red-500 text-white rounded w-1/12"
+                  className="mt-4 bg-blue-500 hover:bg-red-500 text-white rounded w-full md:w-1/12"
                 >
                   <FontAwesomeIcon icon={faX} />
                 </button>
@@ -324,7 +324,7 @@ function ModalFilter({
                 </div>
               </div>
               <button
-                className="mt-8 px-6 py-2 bg-red-500 hover:bg-green-600 text-white font-semibold rounded mr-4 w-1/4"
+                className="mt-8 px-6 py-2 bg-red-500 hover:bg-green-600 text-white font-semibold rounded m-auto md:w-1/4"
                 onClick={closeModal}
               >
                 View Cars
