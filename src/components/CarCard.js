@@ -30,7 +30,7 @@ function CarCard({ selectedMake, minPrice, maxPrice }) {
           .map((car) => {
             return (
               <div
-                className="max-w-sm bg-neutral-300	shadow-lg rounded-lg overflow-hidden mx-2 mx-auto w-full"
+                className="max-w-sm bg-neutral-300 shadow-lg rounded-lg overflow-hidden mx-2 mx-auto w-full"
                 key={car.id}
               >
                 <img
@@ -114,7 +114,7 @@ function CarCard({ selectedMake, minPrice, maxPrice }) {
               </div>
 
               <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 flex justify-between">
-                <div className="text-left">
+                <div className="text-left w-96">
                   <h2 className="text-xl font-black">
                     {selectedCar.name} {selectedCar.model}
                   </h2>
