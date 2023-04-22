@@ -60,7 +60,7 @@ const Navbar = () => {
               <NavLink
                 to="/sign-in"
                 activeClassName="text-gray-200"
-                className="hover:text-gray-200"
+                className="hogit sver:text-gray-200"
               >
                 <span className="text-white"> Sign in</span>
               </NavLink>

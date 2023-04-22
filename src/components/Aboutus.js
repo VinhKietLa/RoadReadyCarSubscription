@@ -7,7 +7,7 @@ function Aboutus() {
     <>
       <div className="mt-28 mb-24 text-center px-4">
         <div>
-          <h1 className="text-4xl font-black">About us</h1>
+          <h1 className="text-4xl font-black mb-12">About us</h1>
           <p>
             At Road Ready, we're revolutionizing the car subscription landscape
             throughout the United Kingdom.
