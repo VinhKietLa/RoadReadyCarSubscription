@@ -149,16 +149,16 @@ function CarDetails() {
           </div>
         </div>
 
-        <div className="flex max-w-8xl justify-center">
-          <div className="rounded px-8">
+        <div className="flex max-w-8xl justify-center items-center">
+          <div className="rounded px-8 md:w-1/2">
             <img
-              className="max-w-lg object-contain mt-1 border-4 border-solid rounded-2xl"
+              className="object-contain mt-1 border-4 border-solid rounded-2xl"
               src="/assets/carddelivery.jpg"
               alt="Car"
             />
           </div>
 
-          <div className="w-1/2">
+          <div className="px-8">
             <h1 className="text-red-500 font-black text-2xl">
               Provided at no extra cost with each subscription
             </h1>
@@ -215,19 +215,19 @@ function CarDetails() {
           </div>
         </div>
 
-        <div className="flex max-w-8xl justify-center mt-16 mb-20">
-          <div className="w-5/12">
+        <div className="flex max-w-8xl justify-center items-center mt-16 mb-20">
+          <div className="px-8 md:w-1/2">
             <h1 className="text-red-500 font-black text-2xl">
               You can subscribe with peace of mind
             </h1>
-            <p className="w-5/6 font-black">
+            <p className=" font-black">
               Our seamless process from start to finish ensures that you find
               your dream car and have peace of mind."
             </p>
             <h1 className="text-red-500 font-black text-2xl mt-6 font-black">
               Our promise to quality
             </h1>
-            <p className="w-5/6">
+            <p className="">
               At our car subscription service, we take quality seriously. Each
               vehicle in our fleet undergoes a rigorous inspection process by
               our team of experienced technicians to ensure it meets our
@@ -243,7 +243,7 @@ function CarDetails() {
 
           <div className="rounded px-8">
             <img
-              className="max-w-lg object-contain mt-1 border-4 border-solid rounded-2xl"
+              className="object-contain mt-1 border-4 border-solid rounded-2xl"
               src="/assets/carcare.jpeg"
               alt="Car"
             />
