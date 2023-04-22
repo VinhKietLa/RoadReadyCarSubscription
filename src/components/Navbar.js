@@ -48,20 +48,11 @@ const Navbar = () => {
           </li>
           <li>
             <NavLink
-              to="/how-it-works"
+              to="/contact"
               activeClassName="text-gray-200"
               className="hover:text-gray-200"
             >
-              How it works
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/help"
-              activeClassName="text-gray-200"
-              className="hover:text-gray-200"
-            >
-              Help
+              Contact
             </NavLink>
           </li>
           <li>
