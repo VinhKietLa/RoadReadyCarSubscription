@@ -5,6 +5,8 @@ import Footer from "./Footer.js";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSquareCheck } from "@fortawesome/free-solid-svg-icons";
+import { faHeadset } from "@fortawesome/free-solid-svg-icons";
+
 
 function CarDetails() {
   // initialises state variable called selectedCar with setSelectedCar function to update it//
@@ -53,27 +55,40 @@ function CarDetails() {
           </div>
         </div>
 
-        <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 flex flex-col md:flex-row justify-between mt-16">
-          <div className="text-left ">
+        <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 flex flex-col md:flex-row mt-16 justify-evenly">
+          <div className="text-left">
             <h2 className="text-3xl font-black">
               {selectedCar.name} {selectedCar.model}
             </h2>
-            <p className="font-black">{selectedCar.Year}</p>
-            <p className="font-black">{selectedCar.mileage} miles</p>
-            <p className="font-black">{selectedCar.fuel}</p>
-            <p className="font-black">{selectedCar.transmission}</p>
+            <p className="font-black text-xl">{selectedCar.Year}</p>
+            <p className="font-black text-xl">{selectedCar.mileage} miles</p>
+            <p className="font-black text-xl">{selectedCar.fuel}</p>
+            <p className="font-black text-xl">{selectedCar.transmission}</p>
           </div>
 
-          <div className="md:mr-12 self-center mt-4 w-1/2">
-            <p className="text-4xl font-black">
+          <div className="md:mr-12 self-center mt-4 ">
+            <p className="text-3xl font-black">
               £{selectedCar.Price} <span className="text-lg">/month</span>
             </p>
 
             <button
               type="button"
-              className="bg-red-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg mt-4 w-1/2 h-16"
+              className="bg-red-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg mt-4 w-34 h-16"
             >
               Buy Now
+            </button>
+          </div>
+
+          <div className="md:mr-12 self-center mt-4 ">
+            <p className="text-3xl font-black">
+              Need help?
+            </p>
+
+            <button
+              type="button"
+              className="bg-red-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg mt-4 w-34 h-16"
+            >Call us 
+            <FontAwesomeIcon icon={faHeadset} size="xl" className="pl-4" />
             </button>
           </div>
         </div>
@@ -84,35 +99,52 @@ function CarDetails() {
           </h2>
         </div>
 
-        <div className="flex justify-around mt-6 px-4 flex flex-col md:flex-row mb-16">
-          <div className="mechanical w-1/3">
-            <h1 className="text-xl font-black mt-4 mb-4 ">Mechanical</h1>
-            <p>Transmission: {selectedCar.transmission}</p>
-            <p>Mileage: {selectedCar.mileage}</p>
-            <p>Engine: {selectedCar.engine}</p>
+        <div className="flex justify-around mt-4 px-4 flex flex-col md:flex-row mb-16">
+          <div className="mechanical w-1/3 pr-8">
+            <h1 className="text-xl font-black mt-4 mb-4">Mechanical</h1>
+            <ul className="flex flex-col border-t-4 border-red-500">
+              <li>
+                Transmission{" "}
+                <span className="ml-64">{selectedCar.transmission}</span>
+              </li>
+              <li>
+                Mileage{" "}
+                <span className="ml-72 pl-10">{selectedCar.mileage}</span>
+              </li>
+              <li>
+                Engine <span className="ml-72 pl-12">{selectedCar.engine}</span>
+              </li>
+            </ul>
           </div>
 
-          <div className="trim w-1/3">
+          <div className="trim w-1/3 pr-8">
             <h1 className="text-xl font-black mt-4 mb-4">Trim</h1>
-            <p>Body: {selectedCar.body}</p>
-            <p>Color: {selectedCar.color}</p>
-            <p>Doors: {selectedCar.doors}</p>
-            <p>Seats: {selectedCar.seats}</p>
+
+            <ul className="flex flex-col border-t-4 border-red-500">
+              <li>
+                Body <span className="ml-72 pl-10">{selectedCar.body}</span>
+              </li>
+              <li>
+                Color <span className="ml-72 pl-10">{selectedCar.color}</span>
+              </li>
+              <li>
+                Doors <span className="ml-72 pl-10">{selectedCar.doors}</span>
+              </li>
+              <li>
+                Seats<span className="ml-64 pl-20">{selectedCar.seats}</span>
+              </li>
+            </ul>
           </div>
 
-          <div className="features w-1/3">
-            <h1 className="text-xl font-black mt-4 mb-4 ">
-              Key features include
-            </h1>
-            <ul>
+          <div className="features w-1/3 pr-8">
+            <h1 className="text-xl font-black mt-4 mb-4 ">Key features</h1>
+            <ul className="flex flex-col border-t-4 border-red-500 text-center">
               {selectedCar.features.map((feature, index) => (
                 <li key={index}>{feature}</li>
               ))}
             </ul>
           </div>
         </div>
-
-        
 
         <div className="flex max-w-8xl justify-center">
           <div className="rounded px-8">
@@ -180,7 +212,7 @@ function CarDetails() {
           </div>
         </div>
 
-        <div className="flex max-w-8xl justify-center mt-8 mb-8 ">
+        <div className="flex max-w-8xl justify-center mt-16 mb-20">
           <div className="w-5/12">
             <h1 className="text-red-500 font-black text-2xl">
               You can subscribe with peace of mind
