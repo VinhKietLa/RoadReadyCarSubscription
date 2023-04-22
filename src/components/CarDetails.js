@@ -54,7 +54,7 @@ function CarDetails() {
           </div>
         </div>
 
-        <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 flex flex-col justify-center md:flex-row mt-16 md:justify-evenly">
+        <div className="bg-gray-900 text-white sm:p-6 sm:pb-4 flex flex-col justify-center md:flex-row mt-16 md:justify-evenly md:pt-12 md:pb-12">
           <div className="text-center md:text-left">
             <h2 className="text-3xl font-black">
               {selectedCar.name} {selectedCar.model}
@@ -149,10 +149,10 @@ function CarDetails() {
           </div>
         </div>
 
-        <div className="flex max-w-8xl justify-center items-center">
-          <div className="rounded px-8 md:w-1/2">
+        <div className="flex max-w-8xl justify-center items-center bg-gray-900 text-white pt-10 pb-10">
+          <div className="rounded px-12 md:w-1/2">
             <img
-              className="object-contain mt-1 border-4 border-solid rounded-2xl"
+              className="object-contain mt-1 rounded-2xl p-2"
               src="/assets/carddelivery.jpg"
               alt="Car"
             />
