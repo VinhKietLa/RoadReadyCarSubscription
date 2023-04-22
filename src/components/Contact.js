@@ -13,8 +13,9 @@ function Contact() {
       <div className="mt-24 mb-24">
         <h1 className="text-4xl text-center">Contact Us</h1>
 
-        <div className="flex justify-center mt-24 text-center">
-          <div className="phone md:w-1/3">
+        <div className="flex flex-col md:flex-row justify-center mt-16 md:mt-20 text-center">
+
+          <div className="phone pb-6 md:w-1/3">
             <FontAwesomeIcon
               icon={faHeadset}
               size="2xl"
@@ -28,7 +29,7 @@ function Contact() {
             </button>
           </div>
 
-          <div className="Message md:w-1/3">
+          <div className="Message pb-6 md:w-1/3">
             <FontAwesomeIcon
               icon={faMessage}
               size="2xl"
