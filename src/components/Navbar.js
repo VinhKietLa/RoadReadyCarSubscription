@@ -39,7 +39,7 @@ const Navbar = () => {
           </li>
           <li>
             <NavLink
-              to="/about"
+              to="/aboutus"
               activeClassName="text-gray-200"
               className="hover:text-gray-200"
             >
