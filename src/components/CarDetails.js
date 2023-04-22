@@ -3,6 +3,9 @@ import carData from "../cars.json";
 import { useParams } from "react-router-dom";
 import Footer from "./Footer.js";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSquareCheck } from "@fortawesome/free-solid-svg-icons";
+
 function CarDetails() {
   // initialises state variable called selectedCar with setSelectedCar function to update it//
   const [selectedCar, setSelectedCar] = useState(null);
@@ -50,7 +53,7 @@ function CarDetails() {
           </div>
         </div>
 
-        <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 flex flex-col md:flex-row justify-between">
+        <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 flex flex-col md:flex-row justify-between mt-16">
           <div className="text-left ">
             <h2 className="text-3xl font-black">
               {selectedCar.name} {selectedCar.model}
@@ -74,39 +77,141 @@ function CarDetails() {
             </button>
           </div>
         </div>
-        <h2 className="font-bold text-2xl text-left px-4">Your car overview</h2>
 
-        <div className="flex justify-between mt-6 px-4 flex flex-col md:flex-row">
-          <div className="flex justify-between mt-6 px-4 flex flex-col md:flex-row">
-            <div className="mechanical">
-              <h1 className="text-xl font-black mt-4 mb-4 border-red-500 border-x-2">
-                Mechanical
-              </h1>
-              <p>Transmission: {selectedCar.transmission}</p>
-              <p>Mileage: {selectedCar.mileage}</p>
-              <p>Engine: {selectedCar.engine}</p>
-            </div>
+        <div className="mt-20">
+          <h2 className="font-bold text-2xl text-left px-4">
+            Your car overview
+          </h2>
+        </div>
 
-            <div className="trim">
-              <h1 className="text-xl font-black mt-4 mb-4 border-red-500 border-x-2">
-                Trim
-              </h1>
-              <p>Body: {selectedCar.body}</p>
-              <p>Color: {selectedCar.color}</p>
-              <p>Doors: {selectedCar.doors}</p>
-              <p>Seats: {selectedCar.seats}</p>
-            </div>
+        <div className="flex justify-around mt-6 px-4 flex flex-col md:flex-row mb-16">
+          <div className="mechanical w-1/3">
+            <h1 className="text-xl font-black mt-4 mb-4 ">Mechanical</h1>
+            <p>Transmission: {selectedCar.transmission}</p>
+            <p>Mileage: {selectedCar.mileage}</p>
+            <p>Engine: {selectedCar.engine}</p>
+          </div>
 
-            <div className="features">
-              <h1 className="text-xl font-black mt-4 mb-4 border-red-500 border-x-2 px-4">
-                Key features include
-              </h1>
-              <ul>
-                {selectedCar.features.map((feature, index) => (
-                  <li key={index}>{feature}</li>
-                ))}
-              </ul>
-            </div>
+          <div className="trim w-1/3">
+            <h1 className="text-xl font-black mt-4 mb-4">Trim</h1>
+            <p>Body: {selectedCar.body}</p>
+            <p>Color: {selectedCar.color}</p>
+            <p>Doors: {selectedCar.doors}</p>
+            <p>Seats: {selectedCar.seats}</p>
+          </div>
+
+          <div className="features w-1/3">
+            <h1 className="text-xl font-black mt-4 mb-4 ">
+              Key features include
+            </h1>
+            <ul>
+              {selectedCar.features.map((feature, index) => (
+                <li key={index}>{feature}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        
+
+        <div className="flex max-w-8xl justify-center">
+          <div className="rounded px-8">
+            <img
+              className="max-w-lg object-contain mt-1 border-4 border-solid rounded-2xl"
+              src="/assets/carddelivery.jpg"
+              alt="Car"
+            />
+          </div>
+
+          <div className="w-1/2">
+            <h1 className="text-red-500 font-black text-2xl">
+              Provided at no extra cost with each subscription
+            </h1>
+            <ul className="mt-6">
+              <li className="pt-2">
+                <FontAwesomeIcon
+                  icon={faSquareCheck}
+                  size="xl"
+                  style={{ color: "#ef4444" }}
+                />{" "}
+                Free Home Delivery and Collection
+              </li>
+              <li className="pt-2">
+                <FontAwesomeIcon
+                  icon={faSquareCheck}
+                  size="xl"
+                  style={{ color: "#ef4444" }}
+                />{" "}
+                Free Home Charging for EVs
+              </li>
+              <li className="pt-2">
+                <FontAwesomeIcon
+                  icon={faSquareCheck}
+                  size="xl"
+                  style={{ color: "#ef4444" }}
+                />{" "}
+                Maintenance and servicing fees covered
+              </li>
+              <li className="pt-2">
+                <FontAwesomeIcon
+                  icon={faSquareCheck}
+                  size="xl"
+                  style={{ color: "#ef4444" }}
+                />{" "}
+                Unlimited mileage
+              </li>
+              <li className="pt-2">
+                <FontAwesomeIcon
+                  icon={faSquareCheck}
+                  size="xl"
+                  style={{ color: "#ef4444" }}
+                />{" "}
+                Comprehensive insurance cover for two drivers
+              </li>
+              <li className="pt-2">
+                <FontAwesomeIcon
+                  icon={faSquareCheck}
+                  size="xl"
+                  style={{ color: "#ef4444" }}
+                />{" "}
+                24/7 Help and Roadside assistance
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="flex max-w-8xl justify-center mt-8 mb-8 ">
+          <div className="w-5/12">
+            <h1 className="text-red-500 font-black text-2xl">
+              You can subscribe with peace of mind
+            </h1>
+            <p className="w-5/6 font-black">
+              Our seamless process from start to finish ensures that you find
+              your dream car and have peace of mind."
+            </p>
+            <h1 className="text-red-500 font-black text-2xl mt-6 font-black">
+              Our promise to quality
+            </h1>
+            <p className="w-5/6">
+              At our car subscription service, we take quality seriously. Each
+              vehicle in our fleet undergoes a rigorous inspection process by
+              our team of experienced technicians to ensure it meets our
+              standards for safety, reliability, and overall quality. We take
+              great care in reconditioning each car to ensure it's in top
+              condition before it's delivered to you. We are transparent about
+              any imperfections and provide clear information about the car's
+              condition so you can make an informed decision. We are dedicated
+              to delivering a high-quality car subscription service that you can
+              depend on.
+            </p>
+          </div>
+
+          <div className="rounded px-8">
+            <img
+              className="max-w-lg object-contain mt-1 border-4 border-solid rounded-2xl"
+              src="/assets/carcare.jpeg"
+              alt="Car"
+            />
           </div>
         </div>
       </div>
