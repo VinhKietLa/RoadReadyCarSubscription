@@ -7,7 +7,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSquareCheck } from "@fortawesome/free-solid-svg-icons";
 import { faHeadset } from "@fortawesome/free-solid-svg-icons";
 
-
 function CarDetails() {
   // initialises state variable called selectedCar with setSelectedCar function to update it//
   const [selectedCar, setSelectedCar] = useState(null);
@@ -55,8 +54,8 @@ function CarDetails() {
           </div>
         </div>
 
-        <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 flex flex-col md:flex-row mt-16 justify-evenly">
-          <div className="text-left">
+        <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 flex flex-col justify-center md:flex-row mt-16 md:justify-evenly">
+          <div className="text-center md:text-left">
             <h2 className="text-3xl font-black">
               {selectedCar.name} {selectedCar.model}
             </h2>
@@ -66,7 +65,7 @@ function CarDetails() {
             <p className="font-black text-xl">{selectedCar.transmission}</p>
           </div>
 
-          <div className="md:mr-12 self-center mt-4 ">
+          <div className="md:mr-12 self-center mt-4 text-center">
             <p className="text-3xl font-black">
               £{selectedCar.Price} <span className="text-lg">/month</span>
             </p>
@@ -79,16 +78,15 @@ function CarDetails() {
             </button>
           </div>
 
-          <div className="md:mr-12 self-center mt-4 ">
-            <p className="text-3xl font-black">
-              Need help?
-            </p>
+          <div className="md:mr-12 self-center mt-4 text-center">
+            <p className="text-3xl font-black">Need help?</p>
 
             <button
               type="button"
               className="bg-red-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg mt-4 w-34 h-16"
-            >Call us 
-            <FontAwesomeIcon icon={faHeadset} size="xl" className="pl-4" />
+            >
+              Call us
+              <FontAwesomeIcon icon={faHeadset} size="xl" className="pl-4" />
             </button>
           </div>
         </div>
@@ -99,44 +97,49 @@ function CarDetails() {
           </h2>
         </div>
 
-        <div className="flex justify-around mt-4 px-4 flex flex-col md:flex-row mb-16">
-          <div className="mechanical w-1/3 pr-8">
+        <div className="flex justify-center flex-col mt-4 px-4 md:flex-row mb-16 md:justify-around">
+          <div className="mechanical md:w-1/3 pr-8">
             <h1 className="text-xl font-black mt-4 mb-4">Mechanical</h1>
             <ul className="flex flex-col border-t-4 border-red-500">
-              <li>
-                Transmission{" "}
-                <span className="ml-64">{selectedCar.transmission}</span>
+              <li className="flex justify-between">
+                <span>Transmission</span>
+                <span>{selectedCar.transmission}</span>
               </li>
-              <li>
-                Mileage{" "}
-                <span className="ml-72 pl-10">{selectedCar.mileage}</span>
+              <li className="flex justify-between">
+                <span>Mileage</span>
+                <span>{selectedCar.mileage}</span>
               </li>
-              <li>
-                Engine <span className="ml-72 pl-12">{selectedCar.engine}</span>
+              <li className="flex justify-between">
+                <span>Engine</span>
+                <span>{selectedCar.engine}</span>
               </li>
             </ul>
           </div>
 
-          <div className="trim w-1/3 pr-8">
+          <div className="trim md:w-1/3 pr-8">
             <h1 className="text-xl font-black mt-4 mb-4">Trim</h1>
 
             <ul className="flex flex-col border-t-4 border-red-500">
-              <li>
-                Body <span className="ml-72 pl-10">{selectedCar.body}</span>
+              <li className="flex justify-between">
+                <span>Body</span>
+                <span>{selectedCar.body}</span>
               </li>
-              <li>
-                Color <span className="ml-72 pl-10">{selectedCar.color}</span>
+              <li className="flex justify-between">
+                <span>Color</span>
+                <span>{selectedCar.color}</span>
               </li>
-              <li>
-                Doors <span className="ml-72 pl-10">{selectedCar.doors}</span>
+              <li className="flex justify-between">
+                <span>Doors</span>
+                <span>{selectedCar.doors}</span>
               </li>
-              <li>
-                Seats<span className="ml-64 pl-20">{selectedCar.seats}</span>
+              <li className="flex justify-between">
+                <span>Seats</span>
+                <span>{selectedCar.seats}</span>
               </li>
             </ul>
           </div>
 
-          <div className="features w-1/3 pr-8">
+          <div className="features md:w-1/3 pr-8">
             <h1 className="text-xl font-black mt-4 mb-4 ">Key features</h1>
             <ul className="flex flex-col border-t-4 border-red-500 text-center">
               {selectedCar.features.map((feature, index) => (
