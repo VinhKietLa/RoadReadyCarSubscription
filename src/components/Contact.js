@@ -1,6 +1,5 @@
 import Footer from "./Footer.js";
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import React from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeadset } from "@fortawesome/free-solid-svg-icons";
@@ -15,7 +14,7 @@ function Contact() {
 
         <div className="flex flex-col md:flex-row justify-center mt-16 md:mt-20 text-center">
 
-          <div className="phone pb-6 md:w-1/3">
+          <div className="phone pb-6 md:w-1/3 mb-6">
             <FontAwesomeIcon
               icon={faHeadset}
               size="2xl"
@@ -29,7 +28,7 @@ function Contact() {
             </button>
           </div>
 
-          <div className="Message pb-6 md:w-1/3">
+          <div className="Message pb-6 md:w-1/3 mb-6">
             <FontAwesomeIcon
               icon={faMessage}
               size="2xl"
