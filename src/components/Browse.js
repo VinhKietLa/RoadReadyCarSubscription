@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import CarCard from "./CarCard";
 import "../index.css";
 import ModalFilter from "./Modal";
-import ViewCar from "./ViewCar";
-
 
 function Browse() {
   const [selectedMake, setSelectedMake] = useState(null);

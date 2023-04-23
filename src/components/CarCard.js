@@ -1,6 +1,6 @@
 import carData from "../cars.json";
 import Footer from "./Footer.js";
-import React, { useState } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 
 function CarCard({ selectedMake, minPrice, maxPrice }) {
@@ -55,17 +55,17 @@ function CarCard({ selectedMake, minPrice, maxPrice }) {
                     <h1 className="text-black text-xl">
                       Price: £{car.Price}/month
                     </h1>
-                    <button
-                      className="bg-red-500 hover:bg-green-600 text-black px-4 py-2 rounded-lg"
-                    >
-                      <NavLink
+                    <NavLink
                         to={`/car-details/${car.id}`}
                         className="details-link"
                         target="_blank"
                       >
+                    <button
+                      className="bg-red-500 hover:bg-green-600 text-black px-4 py-2 rounded-lg text-center"
+                    >
                         View Details
-                      </NavLink>
                     </button>
+                    </NavLink>
                   </div>
                 </div>
               </div>
