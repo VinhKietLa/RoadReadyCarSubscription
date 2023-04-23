@@ -1,19 +1,39 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      if (scrollTop > 10) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+  
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+  
 
   return (
-    <div className="fixed top-0 left-0 w-full text-black shadow-md z-10">
+<div className={`fixed top-0 left-0 w-full text-black shadow-md z-10 ${isScrolled ? 'bg-white' : 'bg-initialColor'}`}>
       <nav className="container mx-auto px-6 py-3 flex justify-between items-center">
+
         <div className="flex justify-between items-center">
           <NavLink to="/" className="font-semibold text-3xl text-red-500">
             RoadReady
           </NavLink>
         </div>
+        
         <ul
           className={`${
             isOpen ? "block" : "hidden"
