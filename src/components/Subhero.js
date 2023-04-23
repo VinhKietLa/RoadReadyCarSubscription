@@ -19,12 +19,12 @@ import { faXmark } from "@fortawesome/free-solid-svg-icons";
 const Subhero = () => {
   return (
     <>
-      <div className="container mx-auto px-4 text-center pt-16 pb-114">
+      <div className="container mx-auto px-4 text-center pb-114 mt-14">
         <h1 className="text-3xl font-bold">
           Discover the ultimate driving experience with our hassle-free car
           subscriptions.
         </h1>
-        <div className="flex flex-col items-center sm:items-center md:flex-row md:justify-around mt-10 pt-8">
+        <div className="flex flex-col items-center sm:items-center md:flex-row md:justify-around mt-6">
           
           <div className={`flex-initial w-64 sm:h-10 mt-10 ${styles.itemSpacing}`}>
             <h1 className="text-xl font-semibold pb-6">1. Choose your favourite vehicle</h1>
@@ -67,6 +67,7 @@ const Subhero = () => {
             </p>
           </div>
         </div>
+
         <button className="mt-8 px-6 py-2 bg-red-500 hover:bg-green-600 text-white font-semibold rounded mr-4"><NavLink
               to="/browse"
               activeClassName="text-gray-200"
@@ -77,7 +78,7 @@ const Subhero = () => {
       </div>
 
 
-      <div className="mx-auto mt-20 px-4 mt-10 text-center border-top pb-2 bg-gray-900 text-white pt-16 pb-16">
+      <div className="mx-auto px-4 mt-16 pt-16 pb-6 text-center border-top bg-gray-900 text-white">
         <h1 className=" text-3xl font-bold">
           With our flexible car subscription service, you get:
         </h1>
@@ -157,11 +158,11 @@ const Subhero = () => {
         <h1 className="text-center pt-20 font-bold text-2xl pb-14">We also offer many other benefits including <span className="text-red-500 font-bold">free road tax, car washes and fuel</span>.</h1>
       </div>
       
-      <div className="container mx-auto mt-6 mb-8 px-5 flex flex-col md:flex-row items-center">
+      <div className="container mx-auto mt-6 px-5 pt-6 flex flex-col md:flex-row items-center">
       <div className = "flex flex-col text-center items-center">
       <h1 className="w-fukk text-3xl mx-auto items-center"> <span className="text-red-500 font-semibold">Unlock the Road:</span> Download Our App and
       Experience Car Subscriptions Today!</h1>
-      <div className="flex flex-col md:flex-row mt-5">
+      <div className="flex flex-col md:flex-row mt-10">
       <button
         className="px-6 py-2 text-white font-semibold rounded mr-4 h-20 w-60 mb-6"
         style={{
