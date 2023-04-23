@@ -76,12 +76,12 @@ function ModalFilter({
             ></div>
 
             {/* Modal content */}
-            <div className="flex flex-col bg-white rounded p-6 md:p-8  my-8 mx-auto w-1/2 shadow-xl transform transition-all">
+            <div className="flex flex-col bg-white rounded p-6 md:p-8 my-8 mx-auto w-1/2 shadow-xl transform transition-all">
               <h2 className="text-2xl font-bold mb-4">
                 Filter by {/* Close button */}
                 <button
                   onClick={closeModal}
-                  className="mt-4 bg-blue-500 hover:bg-red-500 text-white rounded w-full md:w-1/12"
+                  className="mt-4 bg-gray-500 hover:bg-red-500 text-white rounded w-full md:w-1/12"
                 >
                   <FontAwesomeIcon icon={faX} />
                 </button>
@@ -93,7 +93,7 @@ function ModalFilter({
                   <p>Make</p>
                   <button
                     onClick={() => setMakeOpen(!makeOpen)}
-                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-flex items-center w-full"
+                    className="bg-gray-500 hover:bg-red-500 text-white font-bold py-2 px-4 rounded inline-flex items-center w-full"
                   >
                     <span>{selectedMake === null ? "Select" : selectedMake}</span>
                     <svg
@@ -210,7 +210,7 @@ function ModalFilter({
                   <p>Monthly Price</p>
                   <button
                     onClick={() => setminPriceOpen(!minPriceOpen)}
-                    className="bg-blue-500 w-full hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-flex items-center"
+                    className="bg-gray-500 w-full hover:bg-red-500 text-white font-bold py-2 px-4 rounded inline-flex items-center"
                   >
                     <span>{minPrice === null ? "Min" : "£" +minPrice}</span>
                     <svg
@@ -273,7 +273,7 @@ function ModalFilter({
                   <p>Monthly Price</p>
                   <button
                     onClick={() => setmaxPriceOpen(!maxPriceOpen)}
-                    className="bg-blue-500 w-full hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-flex items-center"
+                    className="bg-gray-500 w-full hover:bg-red-500 text-white font-bold py-2 px-4 rounded inline-flex items-center"
                   >
                     <span>{maxPrice === null ? "Max": "£" +maxPrice}</span>
                     <svg
