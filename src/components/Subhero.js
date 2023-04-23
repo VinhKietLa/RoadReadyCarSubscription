@@ -166,7 +166,7 @@ const Subhero = () => {
       <button
         className="px-6 py-2 text-white font-semibold rounded mr-4 h-20 w-60 mb-6"
         style={{
-          backgroundImage: "url('../assets/iosBtn.png')",
+          backgroundImage: "url('../assets/home/iosBtn.png')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
@@ -175,7 +175,7 @@ const Subhero = () => {
       <button
         className="px-6 py-2 text-white font-semibold rounded h-20 w-60"
         style={{
-          backgroundImage: "url('../assets/androidBtn.png')",
+          backgroundImage: "url('../assets/home/androidBtn.png')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
@@ -183,7 +183,7 @@ const Subhero = () => {
       </button>
     </div>
       </div>
-      <div className="h-[600px] w-[50%] bg-contain bg-no-repeat bg-center flex items-center" style={{ backgroundImage: "url('./assets/mobileApp.png')" }}>
+      <div className="h-[600px] w-[50%] bg-contain bg-no-repeat bg-center flex items-center" style={{ backgroundImage: "url('./assets/home/mobileApp.png')" }}>
       </div>
       </div>
     </>

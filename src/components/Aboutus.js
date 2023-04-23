@@ -86,27 +86,27 @@ function Aboutus() {
 
           <div className="flex flex-row justify-center flex-wrap">
             <img
-              src="./assets/autotrader.jpg"
+              src="./assets/investors/autotrader.jpg"
               className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 h-36 object-contain"
               alt="autotrader"
             ></img>
             <img
-              src="./assets/ecp.png"
+              src="./assets/investors/ecp.png"
               className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 h-36 object-contain"
               alt="euro car parts"
             ></img>
             <img
-              src="./assets/michellin.png"
+              src="./assets/investors/michellin.png"
               className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 h-36 object-contain"
               alt="michellin tyres"
             ></img>
             <img
-              src="./assets/bp.png"
+              src="./assets/investors/bp.png"
               className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 h-36 object-contain"
               alt="BP"
             ></img>
             <img
-              src="./assets/rolex.png"
+              src="./assets/investors/rolex.png"
               className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 h-36 object-contain"
               alt="Rolex"
             ></img>
