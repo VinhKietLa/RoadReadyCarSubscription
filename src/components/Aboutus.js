@@ -14,13 +14,16 @@ function Aboutus() {
           </p>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-center mt-12">
-          <div
-            className="w-full pt-60 bg-contain md:bg-cover lg:bg-contain bg-center bg-no-repeat"
-            style={{ backgroundImage: "url('./assets/rr.png')" }}
-          ></div>
+        <div className="flex flex-col  lg:flex-row justify-center  lg:i mt-12">
+          <div>
+            <img
+            src="./assets/rr.png"
+            className="w-full h-full border-2 rounded-lg"
+            alt="Rolex"
+          ></img>
+          </div>
 
-          <div className="px-16 md:w-2/3 mt-16">
+          <div className="px-12 md:w-2/3 mt-16 items-center">
             <div>
               <h1 className="text-2xl font-black">The Road Ready Story</h1>
               <p className="mt-6 text-left">
