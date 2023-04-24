@@ -51,17 +51,17 @@ function CarCard({ selectedMake, minPrice, maxPrice }) {
                   </div>
                 </div>
                 <div className="p-2">
-                  <div className="flex flex-col h-16 justify-between">
+                  <div className="flex  justify-center md:flex-row md:justify-between h-14">
                     <h1 className="text-black text-xl">
                       Price: £{car.Price}/month
                     </h1>
                     <NavLink
                         to={`/car-details/${car.id}`}
-                        className="details-link"
+                        className="details-link ml-auto"
                         target="_blank"
                       >
                     <button
-                      className="bg-red-500 hover:bg-green-600 text-black px-4 py-2 rounded-lg text-center"
+                      className="bg-red-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg text-center"
                     >
                         View Details
                     </button>
