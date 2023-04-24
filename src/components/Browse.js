@@ -12,7 +12,7 @@ function Browse() {
     <>
       <div
         className="m-auto h-96 mt-20 bg-cover w-full bg-center bg-no-repeat mb-6"
-        style={{ backgroundImage: "url('./assets/browseAudi.png')" }}
+        style={{ backgroundImage: "url('./assets/browseAudi.jpg')" }}
       >
         <div className="text-center text-5xl text-white pt-16">
           <h1>Browse Our Car Range</h1>

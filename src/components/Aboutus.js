@@ -17,7 +17,7 @@ function Aboutus() {
         <div className="flex flex-col  lg:flex-row justify-center  lg:i mt-12">
           <div>
             <img
-            src="./assets/rr.png"
+            src="./assets/rr.jpg"
             className="w-full h-full border-2 rounded-lg"
             alt="Rolex"
           ></img>
