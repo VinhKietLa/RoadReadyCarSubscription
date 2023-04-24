@@ -4,6 +4,18 @@
 
 I created a fully responsive website mockup for a car subscription service. The purpose of this project was to get more familar with ReactJS and also TailWindCSS as well as creating an example site that could be used and worked on in the real world.
 
+## Installation and Setup Instructions:
+
+- Clone github repository.
+- run Npm i.
+- run NPM start within the src folder.
+
+## Features
+
+- Fully responsive
+- Custom navbar
+- Use of props for car information between pages.
+
 ## Tech stack
 
 - React Router Dom
