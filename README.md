@@ -16,6 +16,11 @@ I created a fully responsive website mockup for a car subscription service. The 
 - Custom navbar
 - Use of props for car information between pages.
 
+## Challenges and Learning
+
+- It was my first time using TailwindCSS, so it was initially challenging to understand how it works in order to use it effectively.
+- ReactJS useEffects and useStates, this project helped me to develop my understanding of these two react features.
+
 ## Tech stack
 
 - React Router Dom
