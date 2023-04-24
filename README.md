@@ -6,9 +6,9 @@ I created a fully responsive website mockup for a car subscription service. The 
 
 ## Installation and Setup Instructions:
 
-- Clone github repository.
-- run Npm i.
-- run NPM start within the src folder.
+- Clone github repository `https://github.com/VinhKietLa/RoadReadyCarSubscription.git`
+- run `NPM i`
+- run `NPM start` within the src folder to start the application.
 
 ## Features
 
