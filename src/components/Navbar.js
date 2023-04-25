@@ -10,22 +10,30 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-      if (scrollTop > 10) {
+      const windowWidth = window.innerWidth;
+    
+      if (scrollTop > 10 && windowWidth > 640) {
+        setIsScrolled(true);
+      } else if (windowWidth <= 640) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
       }
     };
+    handleScroll();
+
 
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
+
   }, []);
+
 
   return (
     <div
-      className={`fixed top-0 left-0 w-full text-black shadow-md z-10 ${
+      className={`fixed top-0 left-0 w-full text-black shadow-md z-10 navColor ${
         isScrolled ? "bg-white" : "bg-initialColor"
       }`}
     >

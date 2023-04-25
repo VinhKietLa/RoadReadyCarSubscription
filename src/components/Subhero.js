@@ -19,7 +19,7 @@ import { faXmark } from "@fortawesome/free-solid-svg-icons";
 const Subhero = () => {
   return (
     <>
-      <div className="container mx-auto px-4 text-center pb-114 mt-14">
+      <div className="container mx-auto px-4 text-center pb-114 mt-14" id="learnMore">
         <h1 className="text-3xl font-bold">
           Discover the ultimate driving experience with our hassle-free car
           subscriptions.

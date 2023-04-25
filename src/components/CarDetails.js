@@ -149,10 +149,10 @@ function CarDetails() {
           </div>
         </div>
 
-        <div className="flex max-w-8xl justify-center items-center bg-gray-900 text-white pt-10 pb-10">
-          <div className="rounded px-12 md:w-1/2">
+        <div className="flex flex-col md:flex-row justify-center items-center bg-gray-900 text-white pt-10 pb-10">
+          <div className="rounded px-12 py-8">
             <img
-              className="object-contain mt-1 rounded-2xl p-2"
+              className=" mt-1 rounded-2xl p-2"
               src="/assets/carddelivery.jpg"
               alt="Car"
             />
@@ -215,7 +215,7 @@ function CarDetails() {
           </div>
         </div>
 
-        <div className="flex max-w-8xl justify-center items-center mt-16 mb-20">
+        <div className="flex flex flex-col md:flex-row justify-center items-center mt-16 mb-20">
           <div className="px-8 md:w-1/2">
             <h1 className="text-red-500 font-black text-2xl">
               You can subscribe with peace of mind
@@ -241,7 +241,7 @@ function CarDetails() {
             </p>
           </div>
 
-          <div className="rounded px-8">
+          <div className="rounded px-8 py-8">
             <img
               className="object-contain mt-1 border-4 border-solid rounded-2xl"
               src="/assets/carcare.jpeg"

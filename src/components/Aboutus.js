@@ -19,7 +19,7 @@ function Aboutus() {
             <img
             src="./assets/rr.jpg"
             className="w-full h-full border-2 rounded-lg"
-            alt="Rolex"
+            alt="Road Ready"
           ></img>
           </div>
 

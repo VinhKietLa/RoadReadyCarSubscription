@@ -7,6 +7,7 @@ import Browse from "./Components/Browse";
 import Aboutus from "./Components/Aboutus";
 import Contact from "./Components/Contact";
 import CarDetails from "./Components/CarDetails"
+import Subhero from "./Components/Subhero";
 
 function App() {
   return (
@@ -22,7 +23,6 @@ function App() {
           <Route path="/aboutus" element={<Aboutus />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/car-details/:id" element={<CarDetails />} />
-
         </Routes>
       </div>
     </Router>

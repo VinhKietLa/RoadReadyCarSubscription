@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section className="pt-60 h-screen bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('./assets//home/heroTest.jpeg')"}}>
       <div className="container mx-auto h-full flex flex-col justify-between">
-        <div className="text-center">
+        <div className="text-center mb-12">
           <h1 className="text-5xl font-bold text-white drop-shadow-lg"><span className="text-red-500">Drive Your Dream:</span> Flexible Car Subscriptions for the Modern Motorist</h1>
         </div>
         <div className="mb-80 w-full flex justify-center">
@@ -16,7 +16,13 @@ const Hero = () => {
             >
               Browse Cars
             </NavLink></button>
-          <button className="px-6 py-2 bg-red-500 hover:bg-green-600 text-white font-semibold rounded">Learn More</button>
+          <button className="px-6 py-2 bg-red-500 hover:bg-green-600 text-white font-semibold rounded"><a
+              href="/#learnMore"
+              activeClassName="text-gray-200"
+              className="hover:text-gray-200"
+            >
+              learn More
+            </a></button>
         </div>
       </div>
     </section>
