@@ -5,7 +5,7 @@ import React from "react";
 function Aboutus() {
   return (
     <>
-      <div className="mt-24 mb-24 text-center px-4">
+      <div className="mt-28 mb-24 text-center px-4">
         <div>
           <h1 className="text-4xl font-black mb-12">About us</h1>
           <p className="italic">

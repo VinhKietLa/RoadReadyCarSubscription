@@ -9,10 +9,11 @@ import { faComments } from "@fortawesome/free-solid-svg-icons";
 function Contact() {
   return (
     <>
-      <div className="mt-24 mb-24">
+   <div className="flex flex-col min-h-screen mb-6 mt-6">
+      <div className="mt-24 mb-vh-100 flex-grow">
         <h1 className="text-4xl text-center">Contact Us</h1>
 
-        <div className="flex flex-col md:flex-row justify-center mt-16 md:mt-20 text-center">
+        <div className="flex flex-col md:flex-row justify-center item-center mt-16 md:mt-20 text-center">
 
           <div className="phone pb-6 md:w-1/3 mb-6">
             <FontAwesomeIcon
@@ -55,7 +56,8 @@ function Contact() {
           </div>
         </div>
       </div>
-
+      </div>
+      
       <Footer />
     </>
   );
