@@ -30,7 +30,7 @@ I created a fully responsive website mockup for a car subscription service. The 
 - Figma
 
 ## Preview of application
-[Click here for a Live preview](https://www.roadready.vinhkietla.co.uk/)
+[Click here for a Live preview](https://roadready.vinhkietla.co.uk/)
 
 ![screenshot of application](./public/assets/screenshotofsite.png)
 
