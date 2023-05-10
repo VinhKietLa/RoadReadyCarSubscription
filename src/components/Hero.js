@@ -9,7 +9,7 @@ const Hero = () => {
     >
       <div className="container mx-auto h-full flex flex-col justify-between">
         <div className="text-center mb-12">
-          <h1 className="text-5xl font-black text-gray-400	drop-shadow-lg stroke-white">
+          <h1 className="text-6xl font-black drop-shadow-lg stroke-white">
             <span className="text-red-500">Drive Your Dream:</span> Flexible Car
             Subscriptions for the Modern Motorist
           </h1>
